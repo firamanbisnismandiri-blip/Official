@@ -5,7 +5,224 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT. Firaman Bisnis Mandiri</title>
 <meta name="description" content="PT. Firaman Bisnis Mandiri - General Supplier, Document Handling, Notarial Deed, Construction, Architect Design dan Real Estate.">
-<style>
+<style> 
+
+/* =========================================================
+   FINAL HERO - JANGAN UBAH BAGIAN LAIN
+========================================================= */
+
+.hero{
+  min-height:auto !important;
+  padding:95px 0 45px !important;
+  background:#fff !important;
+}
+
+.hero-grid{
+  position:relative !important;
+  display:flex !important;
+  align-items:center !important;
+  min-height:400px !important;
+  height:400px !important;
+  overflow:hidden !important;
+  border-radius:24px !important;
+  background:#f5f8fc !important;
+  box-shadow:0 15px 40px rgba(10,53,109,.07) !important;
+}
+
+.hero-content{
+  position:relative !important;
+  z-index:10 !important;
+  width:58% !important;
+  padding:45px 0 45px 45px !important;
+}
+
+/* FOTO GEDUNG */
+.hero-logo{
+  position:absolute !important;
+  top:0 !important;
+  right:0 !important;
+  width:48% !important;
+  height:100% !important;
+  border-radius:0 !important;
+  overflow:hidden !important;
+  background:#f5f8fc !important;
+  box-shadow:none !important;
+  z-index:1 !important;
+}
+
+.hero-logo .logo-box{
+  position:absolute !important;
+  top:0 !important;
+  right:0 !important;
+  width:100% !important;
+  height:100% !important;
+  inset:auto 0 0 auto !important;
+
+  background-image:url("hero-building.png") !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+
+  border:0 !important;
+  border-radius:0 !important;
+  padding:0 !important;
+}
+
+/* FOTO MENYATU DENGAN TEKS */
+.hero-logo::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f5f8fc 0%,
+      rgba(245,248,252,.98) 5%,
+      rgba(245,248,252,.80) 20%,
+      rgba(245,248,252,.38) 42%,
+      rgba(245,248,252,0) 72%
+    ) !important;
+
+  pointer-events:none !important;
+}
+
+.hero-logo::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:3 !important;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(10,53,109,.08)
+    ) !important;
+
+  pointer-events:none !important;
+}
+
+.hero-logo .logo-box img{
+  display:none !important;
+}
+
+/* =========================
+   HP
+========================= */
+
+@media(max-width:900px){
+
+  .hero{
+    min-height:auto !important;
+    padding:90px 0 35px !important;
+  }
+
+  .hero-grid{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-end !important;
+
+    height:590px !important;
+    min-height:590px !important;
+
+    border-radius:22px !important;
+  }
+
+  .hero-logo{
+    position:absolute !important;
+    top:0 !important;
+    right:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    z-index:1 !important;
+  }
+
+  /* FOTO DIBUAT LEBIH KECIL */
+  .hero-logo .logo-box{
+    top:0 !important;
+    right:0 !important;
+    left:auto !important;
+
+    width:78% !important;
+    height:58% !important;
+
+    background-size:cover !important;
+    background-position:center !important;
+  }
+
+  .hero-logo::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245,248,252,0) 0%,
+        rgba(245,248,252,0) 38%,
+        rgba(245,248,252,.30) 48%,
+        rgba(245,248,252,.82) 66%,
+        #f5f8fc 82%,
+        #f5f8fc 100%
+      ) !important;
+  }
+
+  .hero-content{
+    width:100% !important;
+    padding:0 30px 30px !important;
+    z-index:10 !important;
+  }
+
+  .hero h1{
+    font-size:clamp(38px,10vw,52px) !important;
+    line-height:1.05 !important;
+  }
+
+  .hero-content>p{
+    font-size:15px !important;
+  }
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding:85px 0 30px !important;
+  }
+
+  .hero-grid{
+    height:590px !important;
+    min-height:590px !important;
+    border-radius:20px !important;
+  }
+
+  .hero-logo .logo-box{
+    width:82% !important;
+    height:54% !important;
+    background-position:center top !important;
+  }
+
+  .hero-content{
+    padding:0 22px 25px !important;
+  }
+
+  .hero h1{
+    font-size:40px !important;
+    line-height:1.05 !important;
+    letter-spacing:-1.5px !important;
+  }
+
+  .hero-content>p{
+    font-size:14px !important;
+    line-height:1.6 !important;
+  }
+
+  .address-card{
+    margin-top:20px !important;
+    padding:14px 16px !important;
+  }
+}
+
 /* =========================================================
    RESET
 ========================================================= */
