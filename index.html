@@ -5,223 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT. Firaman Bisnis Mandiri</title>
 <meta name="description" content="PT. Firaman Bisnis Mandiri - General Supplier, Document Handling, Notarial Deed, Construction, Architect Design dan Real Estate.">
-<style> 
 
-/* =========================================================
-   FINAL HERO - JANGAN UBAH BAGIAN LAIN
-========================================================= */
-
-.hero{
-  min-height:auto !important;
-  padding:95px 0 45px !important;
-  background:#fff !important;
-}
-
-.hero-grid{
-  position:relative !important;
-  display:flex !important;
-  align-items:center !important;
-  min-height:400px !important;
-  height:400px !important;
-  overflow:hidden !important;
-  border-radius:24px !important;
-  background:#f5f8fc !important;
-  box-shadow:0 15px 40px rgba(10,53,109,.07) !important;
-}
-
-.hero-content{
-  position:relative !important;
-  z-index:10 !important;
-  width:58% !important;
-  padding:45px 0 45px 45px !important;
-}
-
-/* FOTO GEDUNG */
-.hero-logo{
-  position:absolute !important;
-  top:0 !important;
-  right:0 !important;
-  width:48% !important;
-  height:100% !important;
-  border-radius:0 !important;
-  overflow:hidden !important;
-  background:#f5f8fc !important;
-  box-shadow:none !important;
-  z-index:1 !important;
-}
-
-.hero-logo .logo-box{
-  position:absolute !important;
-  top:0 !important;
-  right:0 !important;
-  width:100% !important;
-  height:100% !important;
-  inset:auto 0 0 auto !important;
-
-  background-image:url("hero-building.png") !important;
-  background-size:cover !important;
-  background-position:center !important;
-  background-repeat:no-repeat !important;
-
-  border:0 !important;
-  border-radius:0 !important;
-  padding:0 !important;
-}
-
-/* FOTO MENYATU DENGAN TEKS */
-.hero-logo::before{
-  content:"" !important;
-  position:absolute !important;
-  inset:0 !important;
-  z-index:2 !important;
-
-  background:
-    linear-gradient(
-      90deg,
-      #f5f8fc 0%,
-      rgba(245,248,252,.98) 5%,
-      rgba(245,248,252,.80) 20%,
-      rgba(245,248,252,.38) 42%,
-      rgba(245,248,252,0) 72%
-    ) !important;
-
-  pointer-events:none !important;
-}
-
-.hero-logo::after{
-  content:"" !important;
-  position:absolute !important;
-  inset:0 !important;
-  z-index:3 !important;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255,255,255,0),
-      rgba(10,53,109,.08)
-    ) !important;
-
-  pointer-events:none !important;
-}
-
-.hero-logo .logo-box img{
-  display:none !important;
-}
-
-/* =========================
-   HP
-========================= */
-
-@media(max-width:900px){
-
-  .hero{
-    min-height:auto !important;
-    padding:90px 0 35px !important;
-  }
-
-  .hero-grid{
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    justify-content:flex-end !important;
-
-    height:590px !important;
-    min-height:590px !important;
-
-    border-radius:22px !important;
-  }
-
-  .hero-logo{
-    position:absolute !important;
-    top:0 !important;
-    right:0 !important;
-
-    width:100% !important;
-    height:100% !important;
-
-    z-index:1 !important;
-  }
-
-  /* FOTO DIBUAT LEBIH KECIL */
-  .hero-logo .logo-box{
-    top:0 !important;
-    right:0 !important;
-    left:auto !important;
-
-    width:78% !important;
-    height:58% !important;
-
-    background-size:cover !important;
-    background-position:center !important;
-  }
-
-  .hero-logo::before{
-    background:
-      linear-gradient(
-        180deg,
-        rgba(245,248,252,0) 0%,
-        rgba(245,248,252,0) 38%,
-        rgba(245,248,252,.30) 48%,
-        rgba(245,248,252,.82) 66%,
-        #f5f8fc 82%,
-        #f5f8fc 100%
-      ) !important;
-  }
-
-  .hero-content{
-    width:100% !important;
-    padding:0 30px 30px !important;
-    z-index:10 !important;
-  }
-
-  .hero h1{
-    font-size:clamp(38px,10vw,52px) !important;
-    line-height:1.05 !important;
-  }
-
-  .hero-content>p{
-    font-size:15px !important;
-  }
-}
-
-@media(max-width:600px){
-
-  .hero{
-    padding:85px 0 30px !important;
-  }
-
-  .hero-grid{
-    height:590px !important;
-    min-height:590px !important;
-    border-radius:20px !important;
-  }
-
-  .hero-logo .logo-box{
-    width:82% !important;
-    height:54% !important;
-    background-position:center top !important;
-  }
-
-  .hero-content{
-    padding:0 22px 25px !important;
-  }
-
-  .hero h1{
-    font-size:40px !important;
-    line-height:1.05 !important;
-    letter-spacing:-1.5px !important;
-  }
-
-  .hero-content>p{
-    font-size:14px !important;
-    line-height:1.6 !important;
-  }
-
-  .address-card{
-    margin-top:20px !important;
-    padding:14px 16px !important;
-  }
-}
+<style>
 
 /* =========================================================
    RESET
@@ -231,26 +16,32 @@
   margin:0;
   padding:0;
 }
+
 html{
   scroll-behavior:smooth;
 }
+
 body{
   font-family:Arial,Helvetica,sans-serif;
   color:#10213f;
   background:#fff;
   line-height:1.6;
 }
+
 a{
   text-decoration:none;
   color:inherit;
 }
+
 button{
   font-family:inherit;
 }
+
 .container{
   width:min(1100px,90%);
   margin:auto;
 }
+
 /* =========================================================
    NAVBAR
 ========================================================= */
@@ -264,6 +55,7 @@ button{
   border-bottom:1px solid #eee;
   backdrop-filter:blur(12px);
 }
+
 .nav-container{
   width:min(1100px,90%);
   height:76px;
@@ -273,11 +65,13 @@ button{
   justify-content:space-between;
   gap:25px;
 }
+
 .logo{
   display:flex;
   align-items:center;
   flex-shrink:0;
 }
+
 .logo img{
   height:58px;
   width:auto;
@@ -285,6 +79,7 @@ button{
   object-fit:contain;
   display:block;
 }
+
 .links{
   display:flex;
   align-items:center;
@@ -292,22 +87,27 @@ button{
   font-size:14px;
   font-weight:600;
 }
+
 .links a{
   white-space:nowrap;
   transition:.2s ease;
 }
+
 .links a:hover{
   color:#c9962e;
 }
+
 .nav-wa{
   background:#0a356d;
   color:#fff !important;
   padding:10px 17px;
   border-radius:7px;
 }
+
 .nav-wa:hover{
   background:#08294f;
 }
+
 .menu{
   display:none;
   border:0;
@@ -316,12 +116,13 @@ button{
   font-size:27px;
   cursor:pointer;
 }
+
 /* =========================================================
    HERO
 ========================================================= */
 .hero{
   min-height:auto;
-  padding:120px 0 70px;
+  padding:105px 0 45px;
   display:flex;
   align-items:center;
   position:relative;
@@ -331,13 +132,14 @@ button{
 
 .hero-grid{
   position:relative;
-  min-height:470px;
+  min-height:390px;
+  height:390px;
   display:flex;
   align-items:center;
   overflow:hidden;
-  border-radius:28px;
+  border-radius:26px;
   background:#f5f8fc;
-  box-shadow:0 18px 50px rgba(10,53,109,.08);
+  box-shadow:0 15px 40px rgba(10,53,109,.07);
 }
 
 /* =========================================================
@@ -345,15 +147,15 @@ button{
 ========================================================= */
 .hero-content{
   position:relative;
-  z-index:5;
-  width:58%;
-  padding:65px 0 65px 55px;
+  z-index:10;
+  width:64%;
+  padding:42px 0 42px 48px;
   min-width:0;
 }
 
 .badge{
   display:inline-block;
-  margin-bottom:18px;
+  margin-bottom:16px;
   font-size:12px;
   letter-spacing:2px;
   text-transform:uppercase;
@@ -362,10 +164,10 @@ button{
 }
 
 h1{
-  font-size:clamp(42px,5.5vw,68px);
+  font-size:clamp(42px,5.2vw,64px);
   line-height:1.04;
   letter-spacing:-2.5px;
-  margin-bottom:22px;
+  margin-bottom:20px;
   color:#0a356d;
 }
 
@@ -374,11 +176,11 @@ h1 span{
 }
 
 .hero-content>p{
-  max-width:590px;
+  max-width:570px;
   color:#5d6674;
-  font-size:17px;
-  line-height:1.7;
-  margin-bottom:30px;
+  font-size:16px;
+  line-height:1.65;
+  margin-bottom:25px;
 }
 
 .hero-buttons{
@@ -391,7 +193,7 @@ h1 span{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:14px 23px;
+  padding:13px 22px;
   border-radius:8px;
   font-weight:700;
   font-size:14px;
@@ -420,34 +222,58 @@ h1 span{
 }
 
 /* =========================================================
-   FOTO GEDUNG DI DALAM AREA HERO ABU-ABU
+   FOTO GEDUNG
 ========================================================= */
 .hero-logo{
   position:absolute;
   top:0;
   right:0;
-  width:62%;
+  width:44%;
   height:100%;
   border-radius:0;
   overflow:hidden;
   background:#f5f8fc;
   box-shadow:none;
+  z-index:1;
 }
 
+.hero-logo .logo-box{
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  padding:0;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+
+  background-image:url("hero-building.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+/* =========================================================
+   FOTO MENYATU DENGAN TEKS
+========================================================= */
 .hero-logo::before{
   content:"";
   position:absolute;
   inset:0;
   z-index:2;
+
   background:
     linear-gradient(
       90deg,
       #f5f8fc 0%,
-      rgba(245,248,252,.96) 8%,
-      rgba(245,248,252,.78) 22%,
-      rgba(245,248,252,.35) 42%,
-      rgba(245,248,252,0) 65%
+      #f5f8fc 7%,
+      rgba(245,248,252,.96) 15%,
+      rgba(245,248,252,.75) 30%,
+      rgba(245,248,252,.35) 48%,
+      rgba(245,248,252,0) 72%
     );
+
   pointer-events:none;
 }
 
@@ -456,224 +282,33 @@ h1 span{
   position:absolute;
   inset:0;
   z-index:3;
+
   background:
     linear-gradient(
       to bottom,
-      rgba(255,255,255,.05),
-      rgba(10,53,109,.08)
+      rgba(255,255,255,.02),
+      rgba(10,53,109,.06)
     );
+
   pointer-events:none;
 }
 
-.hero-logo .logo-box{
-  position:absolute;
-  inset:0;
-  min-height:0;
-  padding:0;
-  border:0;
-  border-radius:0;
-  box-shadow:none;
-  background-image:url("hero-building.png");
-  background-size:cover;
-  background-position:center;
-}
-
 .hero-logo .logo-box::before,
-.hero-logo .logo-box::after{
-  display:none;
-}
-
+.hero-logo .logo-box::after,
 .hero-logo .logo-box img{
   display:none;
 }
 
 /* =========================================================
-   MOBILE
+   ALAMAT
 ========================================================= */
-@media(max-width:900px){
-  .hero{
-    padding:105px 0 55px;
-  }
-
-  .hero-grid{
-    min-height:470px;
-    display:flex;
-    align-items:flex-end;
-  }
-
-  .hero-logo{
-    width:100%;
-    height:100%;
-    right:0;
-  }
-
-  .hero-logo::before{
-    background:
-      linear-gradient(
-        180deg,
-        rgba(245,248,252,.08) 0%,
-        rgba(245,248,252,.12) 35%,
-        rgba(245,248,252,.72) 65%,
-        #f5f8fc 82%,
-        #f5f8fc 100%
-      );
-  }
-
-  .hero-content{
-    width:100%;
-    padding:380px 30px 35px;
-    z-index:5;
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-item{
-    border-left:0;
-    border-top:1px solid rgba(255,255,255,.25);
-    padding:18px 0 0;
-  }
-
-  .about-item:first-child{
-    border-top:0;
-    padding-top:0;
-  }
-
-  .service-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact-details{
-    border-left:0;
-    border-top:1px solid #e8ebef;
-    padding:25px 0 0;
-  }
-}
-
-@media(max-width:800px){
-  .hero{
-    min-height:auto;
-    padding-top:105px;
-  }
-
-  .hero-grid{
-    min-height:105px;
-  }
-
-  .hero-content{
-    padding:350px 28px 30px;
-  }
-
-  h1{
-    font-size:clamp(40px,12vw,58px);
-  }
-
-  .services h2,
-  .about h2{
-    font-size:34px;
-  }
-
-  .footer-content{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .footer-copy{
-    text-align:left;
-  }
-}
-
-@media(max-width:600px){
-  .hero{
-    padding-top:95px;
-    padding-bottom:45px;
-  }
-
-  .hero-grid{
-    min-height:470px;
-    border-radius:24px;
-  }
-
-  .hero-logo{
-    width:100%;
-  }
-
-  .hero-logo .logo-box{
-    background-position:center;
-  }
-
-  .hero-content{
-    padding:350px 24px 25px;
-  }
-
-  .hero-content>p{
-    font-size:15px;
-  }
-
-  .address-card{
-    padding:16px;
-  }
-
-  .service-grid{
-    grid-template-columns:1fr;
-  }
-
-  .service-card{
-    min-height:220px;
-  }
-
-  .contact-box{
-    padding:23px;
-  }
-
-  .contact-info h2{
-    font-size:30px;
-  }
-
-  .service-modal{
-    padding:12px;
-  }
-
-  .service-modal-box{
-    padding:25px 22px;
-    max-height:92vh;
-  }
-
-  .service-modal-box h3{
-    font-size:24px;
-  }
-
-  .floating-wa{
-    right:15px;
-    bottom:15px;
-    width:55px;
-    min-width:55px;
-    height:55px;
-    padding:0;
-    border-radius:50%;
-    font-size:0;
-  }
-
-  .floating-wa::before{
-    content:"WA";
-    font-size:13px;
-    font-weight:800;
-  }
-}
-
-/* alamat tetap */
 .address-card{
-  margin-top:28px;
+  margin-top:22px;
   border:1px solid #e2c77e;
   background:#fff;
   border-radius:12px;
-  padding:18px 20px;
-  max-width:650px;
+  padding:15px 18px;
+  max-width:620px;
 }
 
 .address-label{
@@ -702,7 +337,7 @@ h1 span{
 
 .address-card a{
   display:inline-block;
-  margin-top:9px;
+  margin-top:8px;
   color:#0a356d;
   font-size:12px;
   font-weight:700;
@@ -712,52 +347,13 @@ h1 span{
   color:#b48424;
 }
 
-
-.address-card{
-  margin-top:28px;
-  border:1px solid #e2c77e;
-  background:#fff;
-  border-radius:12px;
-  padding:18px 20px;
-  max-width:650px;
-}
-.address-label{
-  display:block;
-  margin-bottom:5px;
-  color:#b48424;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-.address-card strong{
-  display:block;
-  color:#0a356d;
-  font-size:14px;
-  line-height:1.5;
-}
-.address-card span{
-  display:block;
-  margin-top:2px;
-  color:#5d6674;
-  font-size:13px;
-}
-.address-card a{
-  display:inline-block;
-  margin-top:9px;
-  color:#0a356d;
-  font-size:12px;
-  font-weight:700;
-}
-.address-card a:hover{
-  color:#b48424;
-}
 /* =========================================================
    SECTION
 ========================================================= */
 section{
   padding:85px 0;
 }
+
 /* =========================================================
    ABOUT
 ========================================================= */
@@ -765,58 +361,70 @@ section{
   background:#0a356d;
   color:#fff;
 }
+
 .about .section-label{
   color:#d6a942;
   margin-bottom:12px;
 }
+
 .about h2{
   font-size:40px;
   line-height:1.15;
   margin-bottom:17px;
 }
+
 .about-text{
   max-width:680px;
   color:#d7deea;
   margin-bottom:35px;
 }
+
 .about-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
+
 .about-item{
   border-left:1px solid rgba(255,255,255,.25);
   padding-left:22px;
 }
+
 .about-item strong{
   display:block;
   margin-bottom:5px;
 }
+
 .about-item span{
   display:block;
   color:#c2ccda;
   font-size:14px;
 }
+
 /* =========================================================
    SERVICES
 ========================================================= */
 .services{
   background:#fafafa;
 }
+
 .services .section-label{
   margin-bottom:12px;
 }
+
 .services h2{
   font-size:40px;
   line-height:1.15;
   margin-bottom:35px;
   color:#0a356d;
 }
+
 .service-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
+
 .service-card{
   position:relative;
   min-height:245px;
@@ -829,28 +437,32 @@ section{
   flex-direction:column;
   transition:.2s ease;
 }
+
 .service-card:hover{
   transform:translateY(-4px);
-  box-shadow:
-    0 15px 35px rgba(0,0,0,.07);
+  box-shadow:0 15px 35px rgba(0,0,0,.07);
   border-color:#dfe4eb;
 }
+
 .number{
   font-size:12px;
   color:#b48424;
   font-weight:700;
   margin-bottom:22px;
 }
+
 .service-card h3{
   font-size:19px;
   color:#0a356d;
   margin-bottom:8px;
 }
+
 .service-card p{
   font-size:14px;
   color:#667085;
   line-height:1.55;
 }
+
 .detail-link{
   margin-top:auto;
   padding-top:20px;
@@ -858,15 +470,18 @@ section{
   font-size:13px;
   font-weight:700;
 }
+
 .detail-link::after{
   content:" →";
 }
+
 /* =========================================================
    CONTACT
 ========================================================= */
 .contact{
   background:#fff;
 }
+
 .contact-box{
   max-width:950px;
   margin:auto;
@@ -875,28 +490,33 @@ section{
   padding:35px;
   background:#fafafa;
 }
+
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1.1fr;
   gap:35px;
   align-items:stretch;
 }
+
 .contact-info .section-label{
   display:block;
   margin-bottom:12px;
 }
+
 .contact-info h2{
   color:#0a356d;
   font-size:34px;
   line-height:1.15;
   margin-bottom:15px;
 }
+
 .contact-info>p{
   color:#667085;
   font-size:14px;
   line-height:1.6;
   max-width:430px;
 }
+
 .contact-details{
   border-left:1px solid #e8ebef;
   padding-left:30px;
@@ -904,16 +524,20 @@ section{
   flex-direction:column;
   justify-content:center;
 }
+
 .contact-item{
   padding:14px 0;
   border-bottom:1px solid #e8ebef;
 }
+
 .contact-item:first-child{
   padding-top:0;
 }
+
 .contact-item:last-of-type{
   border-bottom:0;
 }
+
 .contact-item span{
   display:block;
   margin-bottom:4px;
@@ -923,22 +547,27 @@ section{
   text-transform:uppercase;
   letter-spacing:.7px;
 }
+
 .contact-item strong{
   display:block;
   color:#0a356d;
   font-size:15px;
   line-height:1.5;
 }
+
 .contact-item a{
   color:#0a356d;
 }
+
 .contact-item a:hover{
   color:#b48424;
 }
+
 .contact-btn{
   width:100%;
   margin-top:16px;
 }
+
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -947,25 +576,30 @@ footer{
   color:#fff;
   padding:30px 0;
 }
+
 .footer-content{
   display:flex;
   justify-content:space-between;
   gap:20px;
   align-items:center;
 }
+
 .footer-content strong{
   font-size:14px;
 }
+
 .footer-content p{
   font-size:13px;
   color:#aebbd0;
   margin-top:3px;
 }
+
 .footer-copy{
   font-size:13px;
   color:#aebbd0;
   text-align:right;
 }
+
 /* =========================================================
    FLOATING WHATSAPP
 ========================================================= */
@@ -985,13 +619,14 @@ footer{
   font-size:13px;
   font-weight:700;
   z-index:1001;
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.2);
+  box-shadow:0 8px 25px rgba(0,0,0,.2);
   transition:.2s ease;
 }
+
 .floating-wa:hover{
   transform:translateY(-3px);
 }
+
 /* =========================================================
    MODAL
 ========================================================= */
@@ -1006,9 +641,11 @@ footer{
   backdrop-filter:blur(5px);
   z-index:2000;
 }
+
 .service-modal.active{
   display:flex;
 }
+
 .service-modal-box{
   position:relative;
   width:min(600px,100%);
@@ -1017,10 +654,10 @@ footer{
   padding:34px;
   background:#fff;
   border-radius:17px;
-  box-shadow:
-    0 25px 70px rgba(0,0,0,.25);
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
   animation:modalIn .2s ease;
 }
+
 @keyframes modalIn{
   from{
     opacity:0;
@@ -1031,6 +668,7 @@ footer{
     transform:translateY(0) scale(1);
   }
 }
+
 .modal-close{
   position:absolute;
   top:15px;
@@ -1044,16 +682,19 @@ footer{
   font-size:21px;
   cursor:pointer;
 }
+
 .modal-close:hover{
   background:#e8ebef;
   color:#0a356d;
 }
+
 .modal-number{
   color:#b48424;
   font-size:12px;
   font-weight:800;
   margin-bottom:8px;
 }
+
 .service-modal-box h3{
   color:#0a356d;
   font-size:28px;
@@ -1061,21 +702,25 @@ footer{
   margin-bottom:9px;
   padding-right:35px;
 }
+
 .modal-description{
   color:#667085;
   font-size:14px;
   margin-bottom:24px;
 }
+
 .modal-heading{
   color:#0a356d;
   font-size:14px;
   font-weight:700;
   margin-bottom:10px;
 }
+
 .modal-list{
   list-style:none;
   margin-bottom:25px;
 }
+
 .modal-list li{
   position:relative;
   padding:7px 0 7px 24px;
@@ -1083,6 +728,7 @@ footer{
   font-size:14px;
   line-height:1.55;
 }
+
 .modal-list li::before{
   content:"✓";
   position:absolute;
@@ -1091,51 +737,114 @@ footer{
   color:#b48424;
   font-weight:800;
 }
+
 .modal-wa{
   width:100%;
   text-align:center;
 }
+
 /* =========================================================
    RESPONSIVE
 ========================================================= */
+
 @media(max-width:900px){
+
+  .hero{
+    padding:95px 0 35px;
+  }
+
   .hero-grid{
-    grid-template-columns:1fr;
-    gap:40px;
+    min-height:560px;
+    height:560px;
+    display:flex;
+    align-items:flex-end;
   }
+
+  .hero-content{
+    width:100%;
+    padding:0 30px 30px;
+    z-index:10;
+  }
+
   .hero-logo{
-    order:-1;
+    width:100%;
+    height:100%;
+    right:0;
   }
-  .logo-box{
-    max-width:560px;
-    min-height:360px;
-    margin:auto;
+
+  .hero-logo .logo-box{
+    width:74%;
+    height:57%;
+    left:auto;
+    right:0;
+    top:0;
+    background-position:center;
   }
+
+  .hero-logo::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245,248,252,0) 0%,
+        rgba(245,248,252,0) 28%,
+        rgba(245,248,252,.18) 40%,
+        rgba(245,248,252,.62) 54%,
+        rgba(245,248,252,.92) 68%,
+        #f5f8fc 79%,
+        #f5f8fc 100%
+      );
+  }
+
+  .hero-logo::after{
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(10,53,109,.04)
+      );
+  }
+
+  .hero h1{
+    font-size:clamp(38px,10vw,52px);
+    line-height:1.05;
+  }
+
+  .hero-content>p{
+    font-size:15px;
+  }
+
   .about-grid{
     grid-template-columns:1fr;
   }
+
   .about-item{
     border-left:0;
     border-top:1px solid rgba(255,255,255,.25);
     padding:18px 0 0;
   }
+
   .about-item:first-child{
     border-top:0;
     padding-top:0;
   }
+
   .service-grid{
     grid-template-columns:repeat(2,1fr);
   }
+
   .contact-grid{
     grid-template-columns:1fr;
   }
+
   .contact-details{
     border-left:0;
     border-top:1px solid #e8ebef;
     padding:25px 0 0;
   }
 }
+
 @media(max-width:800px){
+
   .links{
     display:none;
     position:absolute;
@@ -1148,86 +857,141 @@ footer{
     align-items:flex-start;
     gap:18px;
     border-bottom:1px solid #eee;
-    box-shadow:
-      0 12px 25px rgba(0,0,0,.05);
+    box-shadow:0 12px 25px rgba(0,0,0,.05);
   }
+
   .links.active{
     display:flex;
   }
+
   .menu{
     display:block;
   }
+
   .hero{
-    min-height:auto;
-    padding-top:115px;
+    padding-top:95px;
   }
-  .logo-box{
-    min-height:320px;
-    padding:45px;
+
+  .hero-grid{
+    min-height:540px;
+    height:540px;
   }
+
   h1{
     font-size:clamp(40px,12vw,58px);
   }
+
   .services h2,
   .about h2{
     font-size:34px;
   }
+
   .footer-content{
     flex-direction:column;
     align-items:flex-start;
   }
+
   .footer-copy{
     text-align:left;
   }
 }
+
 @media(max-width:600px){
+
   .container,
   .nav-container{
     width:min(92%,1100px);
   }
+
   section{
     padding:65px 0;
   }
+
   .logo img{
     height:50px;
     max-width:200px;
   }
-  .logo-box{
-    min-height:270px;
-    padding:30px;
-    border-radius:18px;
+
+  .hero{
+    padding-top:90px;
+    padding-bottom:30px;
   }
-  .logo-box img{
-    max-width:310px;
+
+  .hero-grid{
+    min-height:535px;
+    height:535px;
+    border-radius:20px;
   }
+
+  .hero-logo .logo-box{
+    width:70%;
+    height:49%;
+    background-position:center top;
+  }
+
+  .hero-logo::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245,248,252,0) 0%,
+        rgba(245,248,252,0) 25%,
+        rgba(245,248,252,.16) 36%,
+        rgba(245,248,252,.55) 48%,
+        rgba(245,248,252,.90) 62%,
+        #f5f8fc 76%,
+        #f5f8fc 100%
+      );
+  }
+
+  .hero-content{
+    padding:0 22px 24px;
+  }
+
+  .hero h1{
+    font-size:40px;
+    line-height:1.05;
+    letter-spacing:-1.5px;
+  }
+
   .hero-content>p{
-    font-size:15px;
+    font-size:14px;
+    line-height:1.6;
   }
+
   .address-card{
-    padding:16px;
+    margin-top:20px;
+    padding:14px 16px;
   }
+
   .service-grid{
     grid-template-columns:1fr;
   }
+
   .service-card{
     min-height:220px;
   }
+
   .contact-box{
     padding:23px;
   }
+
   .contact-info h2{
     font-size:30px;
   }
+
   .service-modal{
     padding:12px;
   }
+
   .service-modal-box{
     padding:25px 22px;
     max-height:92vh;
   }
+
   .service-modal-box h3{
     font-size:24px;
   }
+
   .floating-wa{
     right:15px;
     bottom:15px;
@@ -1238,26 +1002,32 @@ footer{
     border-radius:50%;
     font-size:0;
   }
+
   .floating-wa::before{
     content:"WA";
     font-size:13px;
     font-weight:800;
   }
 }
+
 </style>
 </head>
+
 <body>
+
 <!-- =========================================================
      NAVBAR
 ========================================================= -->
 <header class="navbar">
   <div class="nav-container">
+
     <a href="#" class="logo">
       <img
         src="42F95042-A1A8-484D-8531-E555701973D5.png"
         alt="PT. Firaman Bisnis Mandiri"
       >
     </a>
+
     <button
       class="menu"
       id="menu"
@@ -1267,16 +1037,12 @@ footer{
     >
       ☰
     </button>
+
     <nav class="links" id="links">
-      <a href="#tentang">
-        Tentang
-      </a>
-      <a href="#layanan">
-        Layanan
-      </a>
-      <a href="#kontak">
-        Kontak
-      </a>
+      <a href="#tentang">Tentang</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#kontak">Kontak</a>
+
       <a
         href="https://wa.me/6282288421393"
         target="_blank"
@@ -1286,17 +1052,17 @@ footer{
         WhatsApp
       </a>
     </nav>
+
   </div>
 </header>
-<!-- =========================================================
-     HERO
-========================================================= -->
 
 <!-- =========================================================
      HERO
 ========================================================= -->
 <section class="hero">
+
   <div class="container">
+
     <div class="hero-grid">
 
       <div class="hero-content">
@@ -1365,211 +1131,257 @@ footer{
       </div>
 
     </div>
+
   </div>
+
 </section>
 
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 <section class="about" id="tentang">
+
   <div class="container">
+
     <div class="section-label">
       TENTANG KAMI
     </div>
+
     <h2>
       Partner untuk berbagai kebutuhan bisnis Anda.
     </h2>
+
     <p class="about-text">
       PT. Firaman Bisnis Mandiri hadir untuk membantu
       kebutuhan bisnis, pengadaan barang dan jasa,
       pengurusan dokumen, konstruksi, desain arsitektur
       serta kebutuhan properti dan real estate.
     </p>
+
     <div class="about-grid">
+
       <div class="about-item">
         <strong>
           General Supplier
         </strong>
+
         <span>
           Pengadaan berbagai kebutuhan barang dan jasa.
         </span>
       </div>
+
       <div class="about-item">
         <strong>
           Document Handling
         </strong>
+
         <span>
           Pengurusan dan penerbitan berbagai dokumen.
         </span>
       </div>
+
       <div class="about-item">
         <strong>
           Construction & Design
         </strong>
+
         <span>
           Konstruksi serta perencanaan dan desain bangunan.
         </span>
       </div>
+
     </div>
+
   </div>
+
 </section>
+
 <!-- =========================================================
      LAYANAN
 ========================================================= -->
 <section class="services" id="layanan">
+
   <div class="container">
+
     <div class="section-label">
       LAYANAN KAMI
     </div>
+
     <h2>
       Solusi untuk berbagai kebutuhan.
     </h2>
+
     <div class="service-grid">
-      <!-- GENERAL SUPPLIER -->
+
       <div
         class="service-card"
         data-service="general"
         role="button"
         tabindex="0"
       >
-        <div class="number">
-          01
-        </div>
+        <div class="number">01</div>
+
         <h3>
           General Supplier
         </h3>
+
         <p>
           Pengadaan barang dan jasa.
         </p>
+
         <span class="detail-link">
           Lihat Detail
         </span>
       </div>
-      <!-- DOCUMENT HANDLING -->
+
       <div
         class="service-card"
         data-service="document"
         role="button"
         tabindex="0"
       >
-        <div class="number">
-          02
-        </div>
+        <div class="number">02</div>
+
         <h3>
           Document Handling
         </h3>
+
         <p>
           Pengurusan dan penerbitan berbagai dokumen.
         </p>
+
         <span class="detail-link">
           Lihat Detail
         </span>
       </div>
-      <!-- NOTARIAL DEED -->
+
       <div
         class="service-card"
         data-service="notarial"
         role="button"
         tabindex="0"
       >
-        <div class="number">
-          03
-        </div>
+        <div class="number">03</div>
+
         <h3>
           Notarial Deed
         </h3>
+
         <p>
           Pengurusan akta, administrasi perusahaan
           dan kebutuhan OSS.
         </p>
+
         <span class="detail-link">
           Lihat Detail
         </span>
       </div>
-      <!-- CONSTRUCTION -->
+
       <div
         class="service-card"
         data-service="construction"
         role="button"
         tabindex="0"
       >
-        <div class="number">
-          04
-        </div>
+        <div class="number">04</div>
+
         <h3>
           Construction
         </h3>
+
         <p>
           Pembuatan bangunan baru dan renovasi.
         </p>
+
         <span class="detail-link">
           Lihat Detail
         </span>
       </div>
-      <!-- ARCHITECT DESIGN -->
+
       <div
         class="service-card"
         data-service="architect"
         role="button"
         tabindex="0"
       >
-        <div class="number">
-          05
-        </div>
+        <div class="number">05</div>
+
         <h3>
           Architect Design
         </h3>
+
         <p>
           Perencanaan gambar, RAB dan desain bangunan.
         </p>
+
         <span class="detail-link">
           Lihat Detail
         </span>
       </div>
-      <!-- REAL ESTATE -->
+
       <div
         class="service-card"
         data-service="realestate"
         role="button"
         tabindex="0"
       >
-        <div class="number">
-          06
-        </div>
+        <div class="number">06</div>
+
         <h3>
           Real Estate
         </h3>
+
         <p>
           Penjualan rumah baru, rumah second dan agen property.
         </p>
+
         <span class="detail-link">
           Lihat Detail
         </span>
       </div>
+
     </div>
+
   </div>
+
 </section>
+
 <!-- =========================================================
      KONTAK
 ========================================================= -->
 <section class="contact" id="kontak">
+
   <div class="container">
+
     <div class="contact-box">
+
       <div class="contact-grid">
+
         <div class="contact-info">
+
           <div class="section-label">
             HUBUNGI KAMI
           </div>
+
           <h2>
             Mari bicarakan kebutuhan Anda.
           </h2>
+
           <p>
             Silakan hubungi kami untuk kebutuhan barang,
             jasa, dokumen, proyek, desain maupun properti.
           </p>
+
         </div>
+
         <div class="contact-details">
+
           <div class="contact-item">
+
             <span>
               WhatsApp
             </span>
+
             <strong>
               <a
                 href="https://wa.me/6282288421393"
@@ -1579,31 +1391,44 @@ footer{
                 +62 822-8842-1393
               </a>
             </strong>
+
           </div>
+
           <div class="contact-item">
+
             <span>
               A/N
             </span>
+
             <strong>
               Hotman Jon Tua Saragih
             </strong>
+
           </div>
+
           <div class="contact-item">
+
             <span>
               Instagram
             </span>
+
             <strong>
               PT.Firaman bisnis mandiri
             </strong>
+
           </div>
+
           <div class="contact-item">
+
             <span>
               Alamat (KADIN)
             </span>
+
             <strong>
               KADIN Kota Batam berkantor pusat di Graha KADIN,
               Jl. Engku Putri, Blok A, Batam Centre
             </strong>
+
             <a
               href="https://maps.app.goo.gl/dtVMgeYhW9fRAbyY6?g_st=ic"
               target="_blank"
@@ -1617,7 +1442,9 @@ footer{
             >
               Lihat lokasi di Google Maps →
             </a>
+
           </div>
+
           <a
             href="https://wa.me/6282288421393"
             target="_blank"
@@ -1626,30 +1453,45 @@ footer{
           >
             Chat WhatsApp
           </a>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
 <!-- =========================================================
      FOOTER
 ========================================================= -->
 <footer>
+
   <div class="container footer-content">
+
     <div>
+
       <strong>
         PT. FIRAMAN BISNIS MANDIRI
       </strong>
+
       <p>
         General Supplier • Document Handling • Construction
         • Architect Design • Real Estate
       </p>
+
     </div>
+
     <div class="footer-copy">
       © 2026 PT. Firaman Bisnis Mandiri
     </div>
+
   </div>
+
 </footer>
+
 <!-- =========================================================
      FLOATING WHATSAPP
 ========================================================= -->
@@ -1662,6 +1504,7 @@ footer{
 >
   WhatsApp
 </a>
+
 <!-- =========================================================
      MODAL
 ========================================================= -->
@@ -1670,11 +1513,13 @@ footer{
   id="serviceModal"
   aria-hidden="true"
 >
+
   <div
     class="service-modal-box"
     role="dialog"
     aria-modal="true"
   >
+
     <button
       type="button"
       class="modal-close"
@@ -1683,22 +1528,28 @@ footer{
     >
       ×
     </button>
+
     <div
       class="modal-number"
       id="modalNumber"
     ></div>
+
     <h3 id="modalTitle"></h3>
+
     <p
       class="modal-description"
       id="modalDescription"
     ></p>
+
     <div class="modal-heading">
       Layanan yang kami sediakan:
     </div>
+
     <ul
       class="modal-list"
       id="modalList"
     ></ul>
+
     <a
       href="https://wa.me/6282288421393"
       target="_blank"
@@ -1707,39 +1558,59 @@ footer{
     >
       Chat Melalui WhatsApp
     </a>
+
   </div>
+
 </div>
+
 <script>
+
 /* =========================================================
    MENU MOBILE
 ========================================================= */
+
 const menu =
   document.getElementById("menu");
+
 const links =
   document.getElementById("links");
+
 menu.addEventListener("click",function(){
+
   links.classList.toggle("active");
+
   const isOpen =
     links.classList.contains("active");
+
   menu.setAttribute(
     "aria-expanded",
     isOpen ? "true" : "false"
   );
+
 });
+
 document.querySelectorAll(".links a")
 .forEach(function(link){
+
   link.addEventListener("click",function(){
+
     links.classList.remove("active");
+
     menu.setAttribute(
       "aria-expanded",
       "false"
     );
+
   });
+
 });
+
 /* =========================================================
    DATA LAYANAN
 ========================================================= */
+
 const services = {
+
   general:{
     number:"01",
     title:"General Supplier",
@@ -1749,6 +1620,7 @@ const services = {
       "Pengadaan barang dan jasa"
     ]
   },
+
   document:{
     number:"02",
     title:"Document Handling",
@@ -1765,6 +1637,7 @@ const services = {
       "Pengurusan dan penerbitan Certificate of Origin (COO)"
     ]
   },
+
   notarial:{
     number:"03",
     title:"Notarial Deed",
@@ -1778,6 +1651,7 @@ const services = {
       "Penerbitan NIB"
     ]
   },
+
   construction:{
     number:"04",
     title:"Construction",
@@ -1788,6 +1662,7 @@ const services = {
       "Renovasi"
     ]
   },
+
   architect:{
     number:"05",
     title:"Architect Design",
@@ -1801,6 +1676,7 @@ const services = {
       "Pembuatan 3 dimensi bangunan (3D)"
     ]
   },
+
   realestate:{
     number:"06",
     title:"Real Estate",
@@ -1812,108 +1688,162 @@ const services = {
       "Agen property"
     ]
   }
+
 };
+
 /* =========================================================
    MODAL
 ========================================================= */
+
 const serviceModal =
   document.getElementById("serviceModal");
+
 const modalClose =
   document.getElementById("modalClose");
+
 const modalNumber =
   document.getElementById("modalNumber");
+
 const modalTitle =
   document.getElementById("modalTitle");
+
 const modalDescription =
   document.getElementById("modalDescription");
+
 const modalList =
   document.getElementById("modalList");
+
 function openService(serviceKey){
+
   const service =
     services[serviceKey];
+
   if(!service){
     return;
   }
+
   modalNumber.textContent =
     service.number;
+
   modalTitle.textContent =
     service.title;
+
   modalDescription.textContent =
     service.description;
+
   modalList.innerHTML = "";
+
   service.items.forEach(function(item){
+
     const li =
       document.createElement("li");
+
     li.textContent =
       item;
+
     modalList.appendChild(li);
+
   });
+
   serviceModal.classList.add("active");
+
   serviceModal.setAttribute(
     "aria-hidden",
     "false"
   );
+
   document.body.style.overflow =
     "hidden";
+
   modalClose.focus();
+
 }
+
 function closeService(){
+
   serviceModal.classList.remove("active");
+
   serviceModal.setAttribute(
     "aria-hidden",
     "true"
   );
+
   document.body.style.overflow =
     "";
+
 }
+
 /* =========================================================
    SERVICE CARD CLICK
 ========================================================= */
+
 document.querySelectorAll(".service-card")
 .forEach(function(card){
+
   card.addEventListener("click",function(){
+
     openService(
       card.dataset.service
     );
+
   });
+
   card.addEventListener("keydown",function(event){
+
     if(
       event.key === "Enter" ||
       event.key === " "
     ){
+
       event.preventDefault();
+
       openService(
         card.dataset.service
       );
+
     }
+
   });
+
 });
+
 /* =========================================================
    CLOSE MODAL
 ========================================================= */
+
 modalClose.addEventListener(
   "click",
   closeService
 );
+
 serviceModal.addEventListener(
   "click",
   function(event){
+
     if(event.target === serviceModal){
       closeService();
     }
+
   }
 );
+
 document.addEventListener(
   "keydown",
   function(event){
+
     if(
       event.key === "Escape" &&
       serviceModal.classList.contains("active")
     ){
+
       closeService();
+
     }
+
   }
 );
+
 </script>
+
 </body>
 </html>
