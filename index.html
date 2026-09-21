@@ -206,75 +206,11 @@ h1 span{color:#b48424;}
 }
 
 /* FOTO GEDUNG — LEBIH KECIL & NATURAL */
-.hero-logo{
-  position:absolute;
-  top:0;
-  right:0;
-  width:42%;
-  height:100%;
-  border-radius:0;
-  overflow:hidden;
-  background:#f5f8fc;
-  box-shadow:none;
-  z-index:1;
-}
-
-.hero-logo .logo-box{
-  position:absolute;
-  top:0;
-  right:0;
-  width:100%;
-  height:100%;
-  padding:0;
-  border:0;
-  border-radius:0;
-  box-shadow:none;
-  background-image:url("hero-building.png");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-}
-
-/* FOTO MENYATU DENGAN TEKS — TANPA GARIS BATAS */
-.hero-logo::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  background:
-    linear-gradient(
-      90deg,
-      #f5f8fc 0%,
-      #f5f8fc 8%,
-      rgba(245,248,252,.98) 17%,
-      rgba(245,248,252,.82) 29%,
-      rgba(245,248,252,.52) 42%,
-      rgba(245,248,252,.18) 58%,
-      rgba(245,248,252,0) 76%
-    );
-  pointer-events:none;
-}
-
-.hero-logo::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:3;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.04) 0%,
-      rgba(255,255,255,0) 55%,
-      rgba(10,53,109,.055) 100%
-    );
-  pointer-events:none;
-}
-
-.hero-logo .logo-box::before,
-.hero-logo .logo-box::after,
-.hero-logo .logo-box img{
-  display:none;
-}
+.hero-logo{position:absolute;top:0;right:0;width:48%;height:100%;overflow:hidden;background:transparent;z-index:1;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.08) 8%,rgba(0,0,0,.45) 25%,#000 45%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.08) 8%,rgba(0,0,0,.45) 25%,#000 45%)}
+.hero-logo .logo-box{position:absolute;inset:0;width:100%;height:100%;background-image:url("hero-building.png");background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-logo::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#f5f8fc 0%,rgba(245,248,252,.92) 14%,rgba(245,248,252,.55) 30%,rgba(245,248,252,.16) 48%,transparent 70%);pointer-events:none}
+.hero-logo::after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(10,53,109,.05));pointer-events:none}
+.hero-logo .logo-box::before,.hero-logo .logo-box::after,.hero-logo .logo-box img{display:none}
 
 /* =========================================================
    ALAMAT
