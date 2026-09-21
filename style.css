@@ -1339,3 +1339,123 @@ color: var(–white);
   }
 
 }
+
+
+/* =========================================================
+   HERO MOBILE - FOTO MENYATU DENGAN TEXT
+========================================================= */
+
+@media(max-width:900px){
+
+  .hero{
+    position:relative;
+    min-height:760px;
+    padding:0 !important;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+
+    background:#f5f8fc;
+  }
+
+  .hero-grid{
+    position:relative;
+    display:block !important;
+    width:100%;
+    height:100%;
+  }
+
+  /* FOTO MENJADI BACKGROUND HERO */
+  .hero-logo{
+    position:absolute !important;
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    order:0 !important;
+
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    z-index:0 !important;
+  }
+
+  .hero-logo .logo-box{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    border-radius:0 !important;
+
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+  }
+
+  /* FOTO FADE KE AREA TEXT */
+  .hero-logo::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:2;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245,248,252,0) 35%,
+        rgba(245,248,252,.18) 48%,
+        rgba(245,248,252,.70) 68%,
+        rgba(245,248,252,.96) 82%,
+        #f5f8fc 96%
+      );
+
+    pointer-events:none;
+  }
+
+  .hero-logo::after{
+    display:none !important;
+  }
+
+  /* TEXT DI ATAS FOTO */
+  .hero-content{
+    position:relative !important;
+    z-index:5 !important;
+
+    width:100%;
+    max-width:680px;
+
+    padding:380px 0 55px !important;
+  }
+
+  .hero-content > p{
+    max-width:590px;
+  }
+
+  .hero-buttons{
+    position:relative;
+    z-index:6;
+  }
+}
+
+@media(max-width:600px){
+
+  .hero{
+    min-height:760px;
+  }
+
+  .hero-logo .logo-box{
+    background-position:65% center !important;
+  }
+
+  .hero-content{
+    padding:390px 0 45px !important;
+  }
+
+  .hero h1{
+    font-size:44px;
+    line-height:1.05;
+  }
+}
