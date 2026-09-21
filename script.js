@@ -1,12 +1,13 @@
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
 
-menuBtn.addEventListener("click", function () {
-  navMenu.classList.toggle("active");
-});
+    const target = document.querySelector(this.getAttribute("href"));
 
-document.querySelectorAll(".nav-menu a").forEach(function (link) {
-  link.addEventListener("click", function () {
-    navMenu.classList.remove("active");
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
   });
 });
