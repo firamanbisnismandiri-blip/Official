@@ -1186,4 +1186,55 @@ color: var(–white);
   }
 
 }
-background-image:url("hero-building.png");
+/* =========================================================
+   HERO - RAPAPIKAN SAJA
+========================================================= */
+
+.hero-logo{
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 22px 55px rgba(10,53,109,.13);
+  background:#f5f8fc;
+}
+
+.hero-logo .logo-box{
+  background-size:cover;
+  background-position:center;
+  position:absolute;
+  inset:0;
+  filter:saturate(.82) contrast(.96);
+}
+
+.hero-logo::before{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245,248,252,.92) 0%,
+      rgba(245,248,252,.48) 28%,
+      rgba(245,248,252,.10) 65%,
+      rgba(245,248,252,0) 100%
+    );
+}
+
+.hero-logo::after{
+  background:
+    linear-gradient(
+      to top,
+      rgba(10,53,109,.20),
+      rgba(10,53,109,0) 55%
+    );
+}
+
+@media(max-width:900px){
+  .hero-logo{
+    height:360px;
+    border-radius:20px;
+  }
+}
+
+@media(max-width:600px){
+  .hero-logo{
+    height:280px;
+    border-radius:16px;
+  }
+}
