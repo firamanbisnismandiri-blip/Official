@@ -100,28 +100,37 @@ button{
   cursor:pointer;
 }
 /* =========================================================
-   HERO - NEW CORPORATE DESIGN
+   HERO
 ========================================================= */
 .hero{
-  min-height:100vh;
+  min-height:auto;
   padding:120px 0 70px;
   display:flex;
   align-items:center;
   position:relative;
   overflow:hidden;
-  background:#f5f8fc;
+  background:#fff;
 }
 
 .hero-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
+  position:relative;
+  min-height:560px;
+  display:flex;
   align-items:center;
+  overflow:hidden;
+  border-radius:28px;
+  background:#f5f8fc;
+  box-shadow:0 18px 50px rgba(10,53,109,.08);
 }
 
+/* =========================================================
+   ISI HERO
+========================================================= */
 .hero-content{
   position:relative;
-  z-index:3;
+  z-index:5;
+  width:58%;
+  padding:65px 0 65px 55px;
   min-width:0;
 }
 
@@ -193,20 +202,19 @@ h1 span{
   color:#b48424;
 }
 
-/* VISUAL GEDUNG */
+/* =========================================================
+   FOTO GEDUNG DI DALAM AREA HERO ABU-ABU
+========================================================= */
 .hero-logo{
-  min-width:0;
-  position:relative;
-  height:560px;
-  border-radius:28px;
+  position:absolute;
+  top:0;
+  right:0;
+  width:62%;
+  height:100%;
+  border-radius:0;
   overflow:hidden;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(10,53,109,.05),
-      rgba(180,132,36,.08)
-    );
-  box-shadow:0 25px 70px rgba(10,53,109,.15);
+  background:#f5f8fc;
+  box-shadow:none;
 }
 
 .hero-logo::before{
@@ -217,9 +225,11 @@ h1 span{
   background:
     linear-gradient(
       90deg,
-      rgba(245,248,252,.95) 0%,
-      rgba(245,248,252,.45) 25%,
-      rgba(245,248,252,0) 55%
+      #f5f8fc 0%,
+      rgba(245,248,252,.96) 8%,
+      rgba(245,248,252,.78) 22%,
+      rgba(245,248,252,.35) 42%,
+      rgba(245,248,252,0) 65%
     );
   pointer-events:none;
 }
@@ -227,16 +237,13 @@ h1 span{
 .hero-logo::after{
   content:"";
   position:absolute;
-  left:0;
-  bottom:0;
-  width:100%;
-  height:35%;
-  z-index:2;
+  inset:0;
+  z-index:3;
   background:
     linear-gradient(
-      to top,
-      rgba(10,53,109,.28),
-      transparent
+      to bottom,
+      rgba(255,255,255,.05),
+      rgba(10,53,109,.08)
     );
   pointer-events:none;
 }
@@ -261,6 +268,185 @@ h1 span{
 
 .hero-logo .logo-box img{
   display:none;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media(max-width:900px){
+  .hero{
+    padding:105px 0 55px;
+  }
+
+  .hero-grid{
+    min-height:650px;
+    display:flex;
+    align-items:flex-end;
+  }
+
+  .hero-logo{
+    width:100%;
+    height:100%;
+    right:0;
+  }
+
+  .hero-logo::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245,248,252,.08) 0%,
+        rgba(245,248,252,.12) 35%,
+        rgba(245,248,252,.72) 65%,
+        #f5f8fc 82%,
+        #f5f8fc 100%
+      );
+  }
+
+  .hero-content{
+    width:100%;
+    padding:380px 30px 35px;
+    z-index:5;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-item{
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.25);
+    padding:18px 0 0;
+  }
+
+  .about-item:first-child{
+    border-top:0;
+    padding-top:0;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-details{
+    border-left:0;
+    border-top:1px solid #e8ebef;
+    padding:25px 0 0;
+  }
+}
+
+@media(max-width:800px){
+  .hero{
+    min-height:auto;
+    padding-top:105px;
+  }
+
+  .hero-grid{
+    min-height:620px;
+  }
+
+  .hero-content{
+    padding:350px 28px 30px;
+  }
+
+  h1{
+    font-size:clamp(40px,12vw,58px);
+  }
+
+  .services h2,
+  .about h2{
+    font-size:34px;
+  }
+
+  .footer-content{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-copy{
+    text-align:left;
+  }
+}
+
+@media(max-width:600px){
+  .hero{
+    padding-top:95px;
+    padding-bottom:45px;
+  }
+
+  .hero-grid{
+    min-height:650px;
+    border-radius:24px;
+  }
+
+  .hero-logo{
+    width:100%;
+  }
+
+  .hero-logo .logo-box{
+    background-position:center;
+  }
+
+  .hero-content{
+    padding:350px 24px 25px;
+  }
+
+  .hero-content>p{
+    font-size:15px;
+  }
+
+  .address-card{
+    padding:16px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card{
+    min-height:220px;
+  }
+
+  .contact-box{
+    padding:23px;
+  }
+
+  .contact-info h2{
+    font-size:30px;
+  }
+
+  .service-modal{
+    padding:12px;
+  }
+
+  .service-modal-box{
+    padding:25px 22px;
+    max-height:92vh;
+  }
+
+  .service-modal-box h3{
+    font-size:24px;
+  }
+
+  .floating-wa{
+    right:15px;
+    bottom:15px;
+    width:55px;
+    min-width:55px;
+    height:55px;
+    padding:0;
+    border-radius:50%;
+    font-size:0;
+  }
+
+  .floating-wa::before{
+    content:"WA";
+    font-size:13px;
+    font-weight:800;
+  }
 }
 
 /* alamat tetap */
