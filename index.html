@@ -6,149 +6,477 @@
 
   <title>PT. FIRAMAN BISNIS MANDIRI</title>
 
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
+
   <header class="header">
-    <div class="brand">
-      <img src="42F95042-A1A8-484D-8531-E555701973D5.png" alt="Logo PT Firaman">
-      <div>
-        <h2>FIRAMAN</h2>
+
+    <a href="#home" class="brand">
+      <img
+        src="42F95042-A1A8-484D-8531-E555701973D5.png"
+        alt="Logo PT Firaman Bisnis Mandiri"
+      >
+
+      <div class="brand-text">
+        <strong>PT FIRAMAN</strong>
         <span>BISNIS MANDIRI</span>
       </div>
-    </div>
+    </a>
 
     <nav>
-      <a href="#home">Home</a>
-      <a href="#layanan">Layanan</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#kontak">Kontak</a>
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#layanan">Layanan</a>
+      <a class="nav-link" href="#tentang">Tentang</a>
+      <a class="nav-link" href="#kontak">Kontak</a>
     </nav>
+
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
+  <main>
 
-      <p class="small-title">PT. FIRAMAN BISNIS MANDIRI</p>
+    <!-- ================= HERO ================= -->
 
-      <h1>
-        Solusi Bisnis<br>
-        <span>Profesional & Terpercaya</span>
-      </h1>
+    <section class="hero" id="home">
 
-      <p class="hero-text">
-        General Supplier, Document Handling, Construction,
-        Notarial Deed dan Architect Design.
-      </p>
+      <div class="hero-buildings" aria-hidden="true">
+        <span class="building building-a"></span>
+        <span class="building building-b"></span>
+        <span class="building building-c"></span>
+        <span class="gold-ribbon"></span>
+      </div>
 
-      <a href="https://wa.me/628117000250" class="button">
-        Hubungi Kami
-      </a>
+      <div class="hero-content">
+
+        <div class="hero-logo">
+
+          <img
+            src="42F95042-A1A8-484D-8531-E555701973D5.png"
+            alt=""
+          >
+
+          <div>
+            <strong>PT FIRAMAN</strong>
+            <span>BISNIS MANDIRI</span>
+          </div>
+
+        </div>
+
+
+        <h1>
+          Partner Bisnis Untuk<br>
+          <span>Berbagai Kebutuhan.</span>
+        </h1>
+
+
+        <p class="hero-text">
+          Kami menyediakan berbagai layanan profesional mulai dari
+          general supplier, document handling, notarial deed,
+          construction, architect design hingga real estate.
+        </p>
+
+
+        <a
+          href="https://wa.me/628117000250?text=Halo%20PT%20Firaman%20Bisnis%20Mandiri,%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20yang%20tersedia."
+          class="button button-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Hubungi Kami
+          <span class="arrow">›</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= LAYANAN ================= -->
+
+    <section class="services" id="layanan">
+
+      <div class="section-head centered">
+
+        <div class="section-label">
+          <i></i>
+          <span>LAYANAN KAMI</span>
+          <i></i>
+        </div>
+
+        <h2>Layanan Profesional</h2>
+
+        <p class="section-hint">
+          Klik layanan untuk melihat detail layanan kami.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+
+        <!-- GENERAL SUPPLIER -->
+
+        <button
+          class="service-card"
+          type="button"
+          data-service="supplier"
+        >
+
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64">
+              <path d="M16 21 32 12l16 9v22L32 52 16 43V21Z"/>
+              <path d="m16 21 16 10 16-10"/>
+              <path d="M32 31v21"/>
+            </svg>
+          </div>
+
+          <div class="service-info">
+            <h3>General Supplier</h3>
+            <p>Penyediaan kebutuhan barang dan jasa.</p>
+          </div>
+
+          <span class="service-arrow">›</span>
+
+        </button>
+
+
+        <!-- DOCUMENT HANDLING -->
+
+        <button
+          class="service-card"
+          type="button"
+          data-service="document"
+        >
+
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64">
+              <path d="M18 8h21l9 9v39H18V8Z"/>
+              <path d="M39 8v10h9"/>
+              <path d="M25 29h16"/>
+              <path d="M25 37h16"/>
+              <path d="M25 45h11"/>
+            </svg>
+          </div>
+
+          <div class="service-info">
+            <h3>Document Handling</h3>
+            <p>Pengurusan dan penanganan dokumen.</p>
+          </div>
+
+          <span class="service-arrow">›</span>
+
+        </button>
+
+
+        <!-- NOTARIAL DEED -->
+
+        <button
+          class="service-card"
+          type="button"
+          data-service="notarial"
+        >
+
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64">
+              <path d="M17 8h30v40H17z"/>
+              <path d="M24 18h16"/>
+              <path d="M24 27h16"/>
+              <path d="M24 36h9"/>
+              <path d="m39 39 7-7 6 6-7 7-9 3 3-9Z"/>
+            </svg>
+          </div>
+
+          <div class="service-info">
+            <h3>Notarial Deed</h3>
+            <p>Layanan kebutuhan akta dan administrasi.</p>
+          </div>
+
+          <span class="service-arrow">›</span>
+
+        </button>
+
+
+        <!-- CONSTRUCTION -->
+
+        <button
+          class="service-card"
+          type="button"
+          data-service="construction"
+        >
+
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64">
+              <path d="M12 42h40"/>
+              <path d="M17 42V30h30v12"/>
+              <path d="M22 30V19h20v11"/>
+              <path d="M28 19v-7h8v7"/>
+              <path d="M9 49h46"/>
+            </svg>
+          </div>
+
+          <div class="service-info">
+            <h3>Construction</h3>
+            <p>Layanan pekerjaan konstruksi.</p>
+          </div>
+
+          <span class="service-arrow">›</span>
+
+        </button>
+
+
+        <!-- ARCHITECT DESIGN -->
+
+        <button
+          class="service-card"
+          type="button"
+          data-service="architect"
+        >
+
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64">
+              <path d="m10 29 22-17 22 17"/>
+              <path d="M17 27v25h30V27"/>
+              <path d="M26 52V36h12v16"/>
+              <path d="M43 15v9"/>
+              <path d="M38 19h10"/>
+            </svg>
+          </div>
+
+          <div class="service-info">
+            <h3>Architect Design</h3>
+            <p>Perencanaan dan desain arsitektur.</p>
+          </div>
+
+          <span class="service-arrow">›</span>
+
+        </button>
+
+
+        <!-- REAL ESTATE -->
+
+        <button
+          class="service-card"
+          type="button"
+          data-service="realestate"
+        >
+
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64">
+              <path d="m10 29 22-17 22 17"/>
+              <path d="M16 28v25h32V28"/>
+              <path d="M26 53V37h12v16"/>
+              <path d="M12 57h40"/>
+            </svg>
+          </div>
+
+          <div class="service-info">
+            <h3>Real Estate</h3>
+            <p>Layanan terkait properti dan real estate.</p>
+          </div>
+
+          <span class="service-arrow">›</span>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= POPUP ================= -->
+
+    <div
+      class="service-modal"
+      id="serviceModal"
+      aria-hidden="true"
+    >
+
+      <div
+        class="modal-backdrop"
+        data-close-modal
+      ></div>
+
+
+      <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+
+        <button
+          class="modal-close"
+          type="button"
+          aria-label="Tutup"
+          data-close-modal
+        >
+          ×
+        </button>
+
+
+        <div class="modal-label">
+          LAYANAN FIRAMAN
+        </div>
+
+
+        <h2 id="modalTitle">
+          Detail Layanan
+        </h2>
+
+
+        <div class="modal-divider"></div>
+
+
+        <ul id="modalList"></ul>
+
+
+        <a
+          id="modalWhatsapp"
+          href="https://wa.me/628117000250"
+          class="button button-modal"
+          target="_blank"
+          rel="noopener"
+        >
+          Konsultasi via WhatsApp
+          <span>›</span>
+        </a>
+
+      </div>
 
     </div>
-  </section>
 
 
-  <!-- LAYANAN -->
-  <section class="services" id="layanan">
+    <!-- ================= TENTANG ================= -->
 
-    <div class="section-head">
-      <p>LAYANAN KAMI</p>
-      <h2>Layanan Profesional</h2>
-    </div>
+    <section class="about" id="tentang">
 
-    <div class="service-grid">
+      <div class="about-inner">
 
-      <div class="service">
-        <h3>General Supplier</h3>
-        <p>Penyediaan kebutuhan barang dan jasa.</p>
+        <div class="about-content">
+
+          <div class="section-head">
+
+            <div class="section-label left">
+              <span>TENTANG KAMI</span>
+            </div>
+
+            <h2>
+              PT. FIRAMAN BISNIS MANDIRI
+            </h2>
+
+          </div>
+
+
+          <p>
+            PT. Firaman Bisnis Mandiri hadir sebagai mitra dalam
+            menyediakan berbagai kebutuhan bisnis, administrasi,
+            konstruksi dan desain dengan layanan yang profesional.
+          </p>
+
+        </div>
+
+
+        <div class="about-values">
+
+          <div class="value">
+            <div class="value-icon">✓</div>
+            <h3>Profesional</h3>
+            <p>Pelayanan terbaik untuk Anda.</p>
+          </div>
+
+
+          <div class="value">
+            <div class="value-icon">✓</div>
+            <h3>Terpercaya</h3>
+            <p>Membangun kepercayaan jangka panjang.</p>
+          </div>
+
+
+          <div class="value">
+            <div class="value-icon">✓</div>
+            <h3>Bersama</h3>
+            <p>Tumbuh dan berkembang bersama.</p>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="service">
-        <h3>Document Handling</h3>
-        <p>Pengurusan dan penanganan dokumen.</p>
+    </section>
+
+
+    <!-- ================= KONTAK ================= -->
+
+    <section class="contact" id="kontak">
+
+      <div class="contact-inner">
+
+        <div class="contact-copy">
+
+          <p class="small-title">
+            HUBUNGI KAMI
+          </p>
+
+          <h2>
+            Mari Bekerja Sama
+          </h2>
+
+          <p>
+            Hubungi kami untuk informasi dan kebutuhan bisnis Anda.
+          </p>
+
+        </div>
+
+
+        <div class="contact-wa">
+
+          <div class="contact-number">
+
+            <div class="wa-big">
+              WA
+            </div>
+
+            <div>
+              <span>WhatsApp</span>
+              <strong>+62 811-7000-250</strong>
+            </div>
+
+          </div>
+
+
+          <a
+            href="https://wa.me/628117000250?text=Halo%20PT%20Firaman%20Bisnis%20Mandiri,%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20bisnis%20saya."
+            class="button button-gold"
+            target="_blank"
+            rel="noopener"
+          >
+            Chat WhatsApp
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="service">
-        <h3>Notarial Deed</h3>
-        <p>Layanan kebutuhan akta dan administrasi.</p>
-      </div>
+    </section>
 
-      <div class="service">
-        <h3>Construction</h3>
-        <p>Layanan pekerjaan konstruksi.</p>
-      </div>
-
-      <div class="service">
-        <h3>Architect Design</h3>
-        <p>Perencanaan dan desain arsitektur.</p>
-      </div>
-
-      <div class="service">
-        <h3>Real Estate</h3>
-        <p>Layanan terkait properti dan real estate.</p>
-      </div>
-
-    </div>
-
-  </section>
+  </main>
 
 
-  <!-- TENTANG -->
-  <section class="about" id="tentang">
+  <!-- ================= FOOTER ================= -->
 
-    <div class="about-content">
-
-      <div class="section-head">
-        <p>TENTANG KAMI</p>
-        <h2>PT. FIRAMAN BISNIS MANDIRI</h2>
-      </div>
-
-      <p>
-        PT. Firaman Bisnis Mandiri hadir sebagai mitra dalam menyediakan
-        berbagai kebutuhan bisnis, administrasi, konstruksi dan desain
-        dengan layanan yang profesional.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- KONTAK -->
-  <section class="contact" id="kontak">
-
-    <div class="contact-content">
-
-      <p class="small-title">HUBUNGI KAMI</p>
-
-      <h2>Mari Bekerja Sama</h2>
-
-      <p>
-        Hubungi kami untuk informasi dan kebutuhan bisnis Anda.
-      </p>
-
-      <a href="https://wa.me/628117000250" class="button">
-        WhatsApp
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 PT. FIRAMAN BISNIS MANDIRI</p>
+    <p>
+      © 2026 PT. FIRAMAN BISNIS MANDIRI
+    </p>
   </footer>
 
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=5"></script>
 
 </body>
 </html>
