@@ -1,18 +1,12 @@
-const menu = document.getElementById("menu");
-const links = document.getElementById("links");
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
-
-// Menu mobile
-menu.addEventListener("click", () => {
-  links.classList.toggle("active");
+menuBtn.addEventListener("click", function () {
+  navMenu.classList.toggle("active");
 });
 
-
-// Tutup menu setelah memilih halaman
-document.querySelectorAll(".links a").forEach((a) => {
-
-  a.addEventListener("click", () => {
-    links.classList.remove("active");
+document.querySelectorAll(".nav-menu a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navMenu.classList.remove("active");
   });
-
 });
