@@ -1238,3 +1238,104 @@ color: var(–white);
     border-radius:16px;
   }
 }
+/* =========================================================
+   HERO - FOTO MENYATU DENGAN TEXT
+========================================================= */
+
+.hero-logo{
+  position:relative;
+  height:560px;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+  background:transparent;
+  box-shadow:none;
+}
+
+/* Foto gedung */
+.hero-logo .logo-box{
+  position:absolute;
+  inset:0;
+
+  border:0;
+  border-radius:0;
+  padding:0;
+
+  background-image:url("hero-building.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  box-shadow:none;
+}
+
+/* Fade foto menuju area teks */
+.hero-logo::before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:-1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f5f8fc 0%,
+      rgba(245,248,252,.96) 8%,
+      rgba(245,248,252,.72) 22%,
+      rgba(245,248,252,.25) 42%,
+      rgba(245,248,252,0) 62%
+    );
+
+  pointer-events:none;
+}
+
+/* Fade bagian bawah agar lebih natural */
+.hero-logo::after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(245,248,252,.35) 0%,
+      rgba(245,248,252,0) 30%
+    );
+
+  pointer-events:none;
+}
+
+/* Jangan tampilkan logo kedua di dalam foto */
+.hero-logo .logo-box img{
+  display:none;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .hero-logo{
+    height:360px;
+    margin-top:-10px;
+  }
+
+  .hero-logo::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245,248,252,0) 45%,
+        rgba(245,248,252,.35) 72%,
+        #f5f8fc 100%
+      );
+  }
+}
+
+@media(max-width:600px){
+
+  .hero-logo{
+    height:300px;
+    margin-top:-5px;
+  }
+
+}
