@@ -3,52 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>PT. Firaman Bisnis Mandiri</title>
+
   <meta name="description" content="PT. Firaman Bisnis Mandiri - General Supplier, Notarial Deed, Document Handling, Construction, Architect Design dan Real Estate.">
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     html {
       scroll-behavior: smooth;
     }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: #10213f;
       background: #fff;
       line-height: 1.6;
     }
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
     .container {
       width: min(1100px, 90%);
       margin: auto;
     }
-    /* NAVBAR */
-    nav {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
-      z-index: 10;
+      z-index: 1000;
       background: rgba(255,255,255,.95);
       border-bottom: 1px solid #eee;
       backdrop-filter: blur(10px);
     }
-    .nav {
+
+    .nav-container {
+      width: min(1100px, 90%);
       height: 76px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .logo {
+
+    .logo img {
       height: 58px;
       width: auto;
       object-fit: contain;
+      display: block;
     }
+
     .links {
       display: flex;
       gap: 28px;
@@ -57,47 +75,58 @@
       font-size: 14px;
       font-weight: 600;
     }
+
     .links a:hover {
       color: #c9962e;
     }
-    .wa-nav {
+
+    .nav-wa {
       background: #0a356d;
       color: #fff !important;
       padding: 10px 17px;
       border-radius: 7px;
     }
+
     .menu {
       display: none;
       font-size: 27px;
       cursor: pointer;
+      border: 0;
+      background: transparent;
+      color: #0a356d;
     }
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       min-height: 100vh;
       padding: 130px 0 80px;
       display: flex;
       align-items: center;
-      background:
-        linear-gradient(
-          135deg,
-          #fff 0%,
-          #f7f9fc 100%
-        );
+      background: linear-gradient(135deg,#fff 0%,#f7f9fc 100%);
     }
+
     .hero-grid {
+      width: min(1100px, 90%);
+      margin: auto;
       display: grid;
       grid-template-columns: 1.15fr .85fr;
       gap: 65px;
       align-items: center;
     }
-    .eyebrow {
+
+    .badge {
       font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #b48424;
       font-weight: 700;
       margin-bottom: 15px;
+      display: inline-block;
     }
+
     h1 {
       font-size: clamp(42px, 6vw, 70px);
       line-height: 1.05;
@@ -105,20 +134,24 @@
       margin-bottom: 22px;
       color: #0a356d;
     }
+
     h1 span {
       color: #b48424;
     }
+
     .hero p {
       max-width: 650px;
       color: #5d6674;
       font-size: 17px;
       margin-bottom: 30px;
     }
-    .buttons {
+
+    .hero-buttons {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
+
     .btn {
       display: inline-block;
       padding: 13px 22px;
@@ -127,127 +160,216 @@
       font-size: 14px;
       transition: .2s;
     }
+
     .primary {
       background: #0a356d;
       color: #fff;
     }
+
     .primary:hover {
       background: #08294f;
       transform: translateY(-2px);
     }
+
     .secondary {
       border: 1px solid #ddd;
       background: #fff;
     }
+
     .secondary:hover {
       border-color: #b48424;
     }
-    .logo-box {
+
+    .hero-logo .logo-box {
       background: #fff;
       border: 1px solid #eee;
       border-radius: 22px;
       padding: 35px;
-      box-shadow:
-        0 20px 50px rgba(10,53,109,.10);
+      box-shadow: 0 20px 50px rgba(10,53,109,.10);
     }
-    .logo-box img {
+
+    .hero-logo img {
       width: 100%;
       max-width: 420px;
       margin: auto;
+      display: block;
     }
-    /* SECTION */
+
+    /* =========================
+       ADDRESS
+    ========================= */
+
+    .hero-address {
+      margin-top: 30px;
+      padding: 17px 20px;
+      background: #fff;
+      border: 1px solid #e8ebef;
+      border-left: 4px solid #b48424;
+      border-radius: 9px;
+      max-width: 680px;
+      transition: .2s;
+    }
+
+    .hero-address:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.06);
+    }
+
+    .hero-address small {
+      display: block;
+      color: #b48424;
+      font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 4px;
+      letter-spacing: .5px;
+    }
+
+    .hero-address strong {
+      display: block;
+      color: #0a356d;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .hero-address span {
+      display: block;
+      color: #667085;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    /* =========================
+       SECTION
+    ========================= */
+
     section {
       padding: 85px 0;
     }
-    /* ABOUT */
+
     .dark {
       background: #0a356d;
       color: #fff;
     }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 65px;
       align-items: center;
     }
-    .dark .eyebrow {
+
+    .dark .badge {
       color: #d6a942;
     }
+
     h2 {
       font-size: 40px;
       line-height: 1.15;
       margin-bottom: 17px;
     }
+
     .about p {
       color: #d7deea;
     }
+
     .info {
       border-left: 1px solid rgba(255,255,255,.25);
       padding-left: 32px;
     }
+
     .info div {
       margin-bottom: 20px;
     }
+
     .info strong {
       display: block;
     }
+
     .info span {
       color: #c2ccda;
       font-size: 14px;
     }
-    /* SERVICES */
+
+    /* =========================
+       SERVICES
+    ========================= */
+
     .services {
       background: #fafafa;
     }
+
     .heading {
       text-align: center;
       max-width: 650px;
       margin: 0 auto 45px;
     }
+
     .heading p {
       color: #667085;
     }
+
     .service-grid {
+      width: min(1100px, 90%);
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
-    .card {
+
+    .service-card {
       background: #fff;
       border: 1px solid #e8ebef;
       padding: 28px;
       border-radius: 12px;
       transition: .2s;
       cursor: pointer;
+      position: relative;
     }
-    .card:hover {
+
+    .service-card:hover {
       transform: translateY(-4px);
-      box-shadow:
-        0 15px 35px rgba(0,0,0,.07);
+      box-shadow: 0 15px 35px rgba(0,0,0,.07);
+      border-color: #d9dde3;
     }
+
     .number {
       font-size: 12px;
       color: #b48424;
       font-weight: 700;
       margin-bottom: 25px;
     }
-    .card h3 {
+
+    .service-card h3 {
       font-size: 19px;
       color: #0a356d;
       margin-bottom: 8px;
     }
-    .card p {
+
+    .service-card p {
       font-size: 14px;
       color: #667085;
+      margin-bottom: 20px;
     }
-    /* CONTACT */
+
+    .detail-link {
+      color: #b48424;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
     .contact {
       text-align: center;
     }
+
     .contact > p {
       color: #667085;
       margin-bottom: 30px;
     }
+
     .contact-box {
       max-width: 620px;
       margin: auto;
@@ -256,39 +378,74 @@
       padding: 30px;
       background: #fafafa;
     }
+
     .row {
       padding: 14px 0;
       border-bottom: 1px solid #e8ebef;
     }
+
     .row:last-of-type {
       border: 0;
     }
+
     .row small {
       display: block;
       color: #8a929f;
     }
+
     .row strong {
       font-size: 16px;
       color: #0a356d;
     }
-    /* FOOTER */
+
+    .contact-map {
+      color: #0a356d;
+    }
+
+    .contact-map:hover {
+      color: #b48424;
+    }
+
+    .contact-wa {
+      display: inline-block;
+      margin-top: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       background: #071d3c;
       color: #fff;
       padding: 30px 0;
     }
-    .footer {
+
+    .footer-content {
+      width: min(1100px, 90%);
+      margin: auto;
       display: flex;
       justify-content: space-between;
       gap: 20px;
       align-items: center;
     }
-    .footer p {
+
+    .footer-content p {
       font-size: 13px;
       color: #aebbd0;
     }
-    /* FLOATING WHATSAPP */
-    .float {
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .floating-wa {
       position: fixed;
       right: 20px;
       bottom: 20px;
@@ -300,26 +457,31 @@
       display: grid;
       place-items: center;
       font-size: 24px;
-      z-index: 20;
-      box-shadow:
-        0 8px 25px rgba(0,0,0,.2);
+      z-index: 2000;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
     }
-    /* POPUP LAYANAN */
+
+    /* =========================
+       POPUP
+    ========================= */
+
     .service-modal {
       position: fixed;
       inset: 0;
-      background: rgba(7,29,60,.65);
+      background: rgba(7,29,60,.72);
       display: none;
       align-items: center;
       justify-content: center;
       padding: 20px;
       z-index: 9999;
     }
+
     .service-modal.active {
       display: flex;
     }
+
     .service-modal-box {
-      width: min(560px, 100%);
+      width: min(560px,100%);
       max-height: 90vh;
       overflow-y: auto;
       background: #fff;
@@ -329,531 +491,927 @@
       box-shadow: 0 25px 70px rgba(0,0,0,.25);
       animation: popupIn .2s ease;
     }
+
     @keyframes popupIn {
       from {
         opacity: 0;
         transform: translateY(15px) scale(.98);
       }
+
       to {
         opacity: 1;
         transform: translateY(0) scale(1);
       }
     }
-    .service-modal-close {
+
+    .modal-close {
       position: absolute;
-      top: 12px;
-      right: 15px;
+      right: 18px;
+      top: 14px;
       width: 38px;
       height: 38px;
       border: 0;
+      border-radius: 50%;
       background: #f2f4f7;
       color: #0a356d;
-      border-radius: 50%;
       font-size: 25px;
-      line-height: 1;
       cursor: pointer;
     }
-    .service-modal-close:hover {
-      background: #0a356d;
-      color: #fff;
-    }
-    .service-modal-number {
+
+    .modal-number {
       color: #b48424;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       margin-bottom: 8px;
     }
-    .service-modal h3 {
+
+    .service-modal-box h2 {
       color: #0a356d;
-      font-size: 28px;
-      margin-bottom: 14px;
+      font-size: 30px;
+      margin-bottom: 10px;
       padding-right: 35px;
     }
-    .service-modal p {
+
+    .modal-intro {
       color: #667085;
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 15px;
+      margin-bottom: 22px;
     }
-    .service-modal ul {
-      margin: 10px 0 20px 20px;
-      color: #667085;
+
+    .modal-list {
+      padding-left: 20px;
+      margin-bottom: 25px;
     }
-    .service-modal li {
-      margin-bottom: 8px;
+
+    .modal-list li {
+      color: #475467;
+      margin-bottom: 10px;
+      padding-left: 4px;
     }
+
+    .modal-list strong {
+      color: #0a356d;
+    }
+
     .modal-wa {
       display: inline-block;
-      margin-top: 10px;
-      background: #0a356d;
+      width: 100%;
+      text-align: center;
+      background: #25d366;
       color: #fff;
-      padding: 12px 18px;
-      border-radius: 7px;
+      padding: 13px 20px;
+      border-radius: 8px;
       font-weight: 700;
     }
-    .modal-wa:hover {
-      background: #08294f;
-    }
-    /* RESPONSIVE */
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media(max-width:800px) {
-      .links {
-        display: none;
-        position: absolute;
-        top: 76px;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        padding: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        border-bottom: 1px solid #eee;
+
+      .nav-container {
+        height: 70px;
       }
-      .links.active {
-        display: flex;
+
+      .logo img {
+        height: 50px;
       }
+
       .menu {
         display: block;
       }
-      .hero-grid,
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+
+      .links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
       }
-      .service-grid {
-        grid-template-columns: 1fr;
+
+      .links.active {
+        display: flex;
       }
+
       .hero {
-        min-height: auto;
+        padding: 110px 0 60px;
       }
-      .logo-box {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-logo {
         order: -1;
       }
-      h2 {
-        font-size: 34px;
+
+      .hero-logo .logo-box {
+        padding: 25px;
       }
+
+      h1 {
+        font-size: 43px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
       .info {
         border-left: 0;
         border-top: 1px solid rgba(255,255,255,.25);
-        padding: 25px 0 0;
+        padding-left: 0;
+        padding-top: 25px;
       }
-      .footer {
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .footer-content {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
       }
+
       .service-modal-box {
-        padding: 26px 22px;
+        padding: 25px 20px;
+      }
+
+      .service-modal-box h2 {
+        font-size: 25px;
       }
     }
   </style>
 </head>
+
 <body>
-  <!-- NAVBAR -->
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
   <header class="navbar">
     <div class="nav-container">
+
       <a href="#" class="logo">
-        <img src="42F95042-A1A8-484D-8531-E555701973D5.png"
-             alt="PT. Firaman Bisnis Mandiri">
+        <img
+          src="42F95042-A1A8-484D-8531-E555701973D5.png"
+          alt="PT. Firaman Bisnis Mandiri">
       </a>
-      <button class="menu" id="menu">
+
+      <button class="menu" id="menu" aria-label="Menu">
         ☰
       </button>
+
       <nav class="links" id="links">
         <a href="#tentang">Tentang</a>
         <a href="#layanan">Layanan</a>
         <a href="#kontak">Kontak</a>
+
         <a
-          href="https://wa.me/628117000250"
+          href="https://wa.me/6282288421393"
           target="_blank"
+          rel="noopener"
           class="nav-wa">
           WhatsApp
         </a>
       </nav>
+
     </div>
   </header>
-  <!-- HERO -->
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
   <section class="hero">
-    <div class="hero-content">
-      <span class="badge">PT. FIRAMAN BISNIS MANDIRI</span>
-      <h1>
-        Partner Bisnis Untuk
-        <span>Berbagai Kebutuhan.</span>
-      </h1>
-      <p>
-        Kami menyediakan berbagai layanan profesional mulai dari
-        general supplier, notarial deed, document handling,
-        construction, architect design hingga real estate.
-      </p>
-      <div class="hero-buttons">
-        <a href="#kontak" class="btn primary">
-          Hubungi Kami
+
+    <div class="hero-grid">
+
+      <div class="hero-content">
+
+        <span class="badge">
+          PT. FIRAMAN BISNIS MANDIRI
+        </span>
+
+        <h1>
+          Partner Bisnis Untuk
+          <span>Berbagai Kebutuhan.</span>
+        </h1>
+
+        <p>
+          PT. Firaman Bisnis Mandiri hadir sebagai partner bisnis
+          dalam menyediakan berbagai kebutuhan barang dan jasa,
+          pengurusan dokumen, konstruksi, desain arsitektur,
+          hingga properti.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#layanan" class="btn primary">
+            Lihat Layanan
+          </a>
+
+          <a
+            href="https://wa.me/6282288421393"
+            target="_blank"
+            rel="noopener"
+            class="btn secondary">
+            Hubungi Kami
+          </a>
+
+        </div>
+
+
+        <!-- ALAMAT KADIN -->
+
+        <a
+          href="https://maps.app.goo.gl/dtVMgeYhW9fRAbyY6?g_st=ic"
+          target="_blank"
+          rel="noopener"
+          class="hero-address">
+
+          <small>ALAMAT (KADIN)</small>
+
+          <strong>
+            KADIN Kota Batam berkantor pusat di Graha KADIN,
+            Jl. Engku Putri, Blok A, Batam Centre
+          </strong>
+
+          <span>
+            Klik untuk melihat lokasi di Google Maps →
+          </span>
+
         </a>
-        <a href="#layanan" class="btn secondary">
-          Lihat Layanan
-        </a>
+
       </div>
-    </div>
-    <div class="hero-logo">
-      <div class="logo-box">
-        <img
-          src="42F95042-A1A8-484D-8531-E555701973D5.png"
-          alt="Logo PT. Firaman Bisnis Mandiri"
-        >
+
+
+      <div class="hero-logo">
+
+        <div class="logo-box">
+
+          <img
+            src="42F95042-A1A8-484D-8531-E555701973D5.png"
+            alt="PT. Firaman Bisnis Mandiri">
+
+        </div>
+
       </div>
+
     </div>
+
   </section>
-  <!-- TENTANG -->
-  <section class="about" id="tentang">
-    <div class="container">
-      <div class="section-label">
-        TENTANG KAMI
+
+
+  <!-- =========================
+       TENTANG
+  ========================= -->
+
+  <section class="about dark" id="tentang">
+
+    <div class="container about-grid">
+
+      <div>
+
+        <span class="badge">
+          TENTANG KAMI
+        </span>
+
+        <h2>
+          Partner untuk kebutuhan bisnis Anda.
+        </h2>
+
+        <p>
+          PT. Firaman Bisnis Mandiri merupakan perusahaan
+          yang menyediakan berbagai layanan untuk mendukung
+          kebutuhan perusahaan, proyek, dokumen, konstruksi,
+          desain dan properti.
+        </p>
+
       </div>
-      <h2>
-        PT. Firaman Bisnis Mandiri
-      </h2>
-      <p class="about-text">
-        PT. Firaman Bisnis Mandiri hadir sebagai partner dalam
-        berbagai kebutuhan bisnis, administrasi, konstruksi,
-        desain arsitektur dan properti.
-      </p>
-      <div class="about-grid">
-        <div class="about-item">
-          <strong>Profesional</strong>
-          <span>
-            Mengutamakan pelayanan yang profesional dan terpercaya.
-          </span>
+
+
+      <div class="info">
+
+        <div>
+          <strong>General Supplier</strong>
+          <span>Pengadaan berbagai kebutuhan barang dan jasa.</span>
         </div>
-        <div class="about-item">
-          <strong>Terintegrasi</strong>
-          <span>
-            Berbagai kebutuhan dapat ditangani dalam satu tempat.
-          </span>
+
+        <div>
+          <strong>Document Handling</strong>
+          <span>Pengurusan dan penerbitan berbagai dokumen.</span>
         </div>
-        <div class="about-item">
-          <strong>Terpercaya</strong>
-          <span>
-            Mengutamakan komunikasi dan pelayanan kepada pelanggan.
-          </span>
+
+        <div>
+          <strong>Construction & Design</strong>
+          <span>Konstruksi serta perencanaan dan desain arsitektur.</span>
         </div>
+
+        <div>
+          <strong>Real Estate</strong>
+          <span>Layanan yang berkaitan dengan properti dan real estate.</span>
+        </div>
+
       </div>
+
     </div>
+
   </section>
-  <!-- LAYANAN -->
+
+
+  <!-- =========================
+       LAYANAN
+  ========================= -->
+
   <section class="services" id="layanan">
-    <div class="container">
-      <div class="section-label">
+
+    <div class="heading">
+
+      <span class="badge">
         LAYANAN KAMI
-      </div>
+      </span>
+
       <h2>
-        Solusi Untuk Berbagai Kebutuhan
+        Solusi untuk berbagai kebutuhan.
       </h2>
-      <div class="service-grid">
-        <!-- 01 -->
-        <div
-          class="service-card card"
-          data-service="supplier">
-          <div class="number">01</div>
-          <h3>General Supplier</h3>
-          <p>
-            Penyediaan berbagai kebutuhan barang dan jasa
-            untuk kebutuhan bisnis dan proyek.
-          </p>
-        </div>
-        <!-- 02 -->
-        <div
-          class="service-card card"
-          data-service="notarial">
-          <div class="number">02</div>
-          <h3>Notarial Deed</h3>
-          <p>
-            Membantu kebutuhan administrasi dan dokumen
-            terkait akta notaris.
-          </p>
-        </div>
-        <!-- 03 -->
-        <div
-          class="service-card card"
-          data-service="document">
-          <div class="number">03</div>
-          <h3>Document Handling</h3>
-          <p>
-            Membantu pengurusan dan penanganan berbagai
-            kebutuhan dokumen.
-          </p>
-        </div>
-        <!-- 04 -->
-        <div
-          class="service-card card"
-          data-service="construction">
-          <div class="number">04</div>
-          <h3>Construction</h3>
-          <p>
-            Layanan yang berkaitan dengan kebutuhan
-            konstruksi dan pembangunan.
-          </p>
-        </div>
-        <!-- 05 -->
-        <div
-          class="service-card card"
-          data-service="architect">
-          <div class="number">05</div>
-          <h3>Architect Design</h3>
-          <p>
-            Perencanaan dan desain arsitektur untuk berbagai
-            kebutuhan bangunan.
-          </p>
-        </div>
-        <!-- 06 -->
-        <div
-          class="service-card card"
-          data-service="realestate">
-          <div class="number">06</div>
-          <h3>Real Estate</h3>
-          <p>
-            Layanan dan kebutuhan yang berkaitan dengan
-            properti dan real estate.
-          </p>
-        </div>
-      </div>
+
+      <p>
+        Klik salah satu layanan untuk melihat detail
+        layanan yang kami sediakan.
+      </p>
+
     </div>
+
+
+    <div class="service-grid">
+
+
+      <!-- 01 -->
+
+      <div
+        class="service-card"
+        data-service="supplier"
+        tabindex="0">
+
+        <div class="number">01</div>
+
+        <h3>
+          General Supplier
+        </h3>
+
+        <p>
+          Pengadaan berbagai kebutuhan barang dan jasa.
+        </p>
+
+        <span class="detail-link">
+          Lihat Detail →
+        </span>
+
+      </div>
+
+
+      <!-- 02 -->
+
+      <div
+        class="service-card"
+        data-service="notarial"
+        tabindex="0">
+
+        <div class="number">02</div>
+
+        <h3>
+          Notarial Deed
+        </h3>
+
+        <p>
+          Layanan pembuatan dan pengurusan akta notaris.
+        </p>
+
+        <span class="detail-link">
+          Lihat Detail →
+        </span>
+
+      </div>
+
+
+      <!-- 03 -->
+
+      <div
+        class="service-card"
+        data-service="document"
+        tabindex="0">
+
+        <div class="number">03</div>
+
+        <h3>
+          Document Handling
+        </h3>
+
+        <p>
+          Pengurusan dan penerbitan berbagai dokumen.
+        </p>
+
+        <span class="detail-link">
+          Lihat Detail →
+        </span>
+
+      </div>
+
+
+      <!-- 04 -->
+
+      <div
+        class="service-card"
+        data-service="construction"
+        tabindex="0">
+
+        <div class="number">04</div>
+
+        <h3>
+          Construction
+        </h3>
+
+        <p>
+          Layanan konstruksi dan kebutuhan pekerjaan proyek.
+        </p>
+
+        <span class="detail-link">
+          Lihat Detail →
+        </span>
+
+      </div>
+
+
+      <!-- 05 -->
+
+      <div
+        class="service-card"
+        data-service="architect"
+        tabindex="0">
+
+        <div class="number">05</div>
+
+        <h3>
+          Architect Design
+        </h3>
+
+        <p>
+          Perencanaan dan desain arsitektur untuk berbagai kebutuhan.
+        </p>
+
+        <span class="detail-link">
+          Lihat Detail →
+        </span>
+
+      </div>
+
+
+      <!-- 06 -->
+
+      <div
+        class="service-card"
+        data-service="realestate"
+        tabindex="0">
+
+        <div class="number">06</div>
+
+        <h3>
+          Real Estate
+        </h3>
+
+        <p>
+          Layanan dan kebutuhan yang berkaitan dengan properti.
+        </p>
+
+        <span class="detail-link">
+          Lihat Detail →
+        </span>
+
+      </div>
+
+    </div>
+
   </section>
-  <!-- POPUP LAYANAN -->
+
+
+  <!-- =========================
+       POPUP DETAIL LAYANAN
+  ========================= -->
+
   <div
     class="service-modal"
     id="serviceModal"
     aria-hidden="true">
+
     <div
       class="service-modal-box"
       role="dialog"
-      aria-modal="true"
-      aria-labelledby="modalTitle">
+      aria-modal="true">
+
       <button
-        class="service-modal-close"
+        class="modal-close"
         id="modalClose"
         aria-label="Tutup">
         ×
       </button>
+
       <div
-        class="service-modal-number"
+        class="modal-number"
         id="modalNumber">
       </div>
-      <h3 id="modalTitle"></h3>
-      <div id="modalContent"></div>
+
+      <h2 id="modalTitle"></h2>
+
+      <p
+        class="modal-intro"
+        id="modalIntro">
+      </p>
+
+      <ul
+        class="modal-list"
+        id="modalList">
+      </ul>
+
+      <a
+        href="https://wa.me/6282288421393"
+        target="_blank"
+        rel="noopener"
+        class="modal-wa">
+        Tanya Melalui WhatsApp
+      </a>
+
     </div>
+
   </div>
-  <!-- KONTAK -->
+
+
+  <!-- =========================
+       KONTAK
+  ========================= -->
+
   <section class="contact" id="kontak">
+
     <div class="container">
+
+      <span class="badge">
+        KONTAK
+      </span>
+
+      <h2>
+        Hubungi Kami
+      </h2>
+
+      <p>
+        Silakan hubungi kami untuk kebutuhan barang,
+        jasa, dokumen, proyek maupun properti.
+      </p>
+
+
       <div class="contact-box">
-        <div class="contact-info">
-          <div class="section-label">
-            HUBUNGI KAMI
-          </div>
-          <h2>
-            Mari Bicarakan Kebutuhan Anda.
-          </h2>
-          <p>
-            Hubungi kami melalui WhatsApp untuk informasi
-            lebih lanjut mengenai layanan PT. Firaman Bisnis Mandiri.
-          </p>
+
+        <div class="row">
+
+          <small>WhatsApp</small>
+
+          <strong>
+            <a
+              href="https://wa.me/6282288421393"
+              target="_blank"
+              rel="noopener">
+              +62 822-8842-1393
+            </a>
+          </strong>
+
         </div>
-        <div class="contact-details">
-          <div class="contact-item">
-            <span>WhatsApp</span>
-            <strong>+62 811-7000-250</strong>
-          </div>
-          <div class="contact-item">
-            <span>A/N</span>
-            <strong>Hotman Jon Tua Saragih</strong>
-          </div>
-          <div class="contact-item">
-            <span>Instagram</span>
-            <strong>PT.Firaman bisnis mandiri</strong>
-          </div>
-          <a
-            href="https://wa.me/628117000250"
-            target="_blank"
-            class="btn primary contact-btn">
-            Chat WhatsApp
-          </a>
+
+
+        <div class="row">
+
+          <small>A/N</small>
+
+          <strong>
+            Hotman Jon Tua Saragih
+          </strong>
+
         </div>
+
+
+        <div class="row">
+
+          <small>Alamat (KADIN)</small>
+
+          <strong>
+            <a
+              href="https://maps.app.goo.gl/dtVMgeYhW9fRAbyY6?g_st=ic"
+              target="_blank"
+              rel="noopener"
+              class="contact-map">
+
+              KADIN Kota Batam berkantor pusat di
+              Graha KADIN, Jl. Engku Putri,
+              Blok A, Batam Centre
+              <br>
+              <small>📍 Buka Google Maps →</small>
+
+            </a>
+          </strong>
+
+        </div>
+
+
+        <div class="row">
+
+          <small>Instagram</small>
+
+          <strong>
+            PT.Firaman bisnis mandiri
+          </strong>
+
+        </div>
+
+
+        <a
+          href="https://wa.me/6282288421393"
+          target="_blank"
+          rel="noopener"
+          class="contact-wa">
+
+          Hubungi via WhatsApp
+
+        </a>
+
       </div>
+
     </div>
+
   </section>
-  <!-- FOOTER -->
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    <div class="container footer-content">
-      <div>
-        <strong>PT. FIRAMAN BISNIS MANDIRI</strong>
-        <p>
-          General Supplier • Construction • Real Estate
-        </p>
-      </div>
-      <div>
-        © 2026 PT. Firaman Bisnis Mandiri
-      </div>
+
+    <div class="footer-content">
+
+      <p>
+        © 2026 PT. Firaman Bisnis Mandiri.
+        All Rights Reserved.
+      </p>
+
+      <p>
+        General Supplier • Document Handling • Construction
+      </p>
+
     </div>
+
   </footer>
+
+
   <!-- FLOATING WHATSAPP -->
+
   <a
-    href="https://wa.me/628117000250"
+    href="https://wa.me/6282288421393"
     target="_blank"
+    rel="noopener"
     class="floating-wa"
     aria-label="WhatsApp">
-    WhatsApp
+
+    ☎
+
   </a>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
   <script>
-    /* MENU MOBILE */
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
     const menu = document.getElementById("menu");
     const links = document.getElementById("links");
-    if (menu && links) {
-      menu.addEventListener("click", () => {
-        links.classList.toggle("active");
+
+    menu.addEventListener("click", function () {
+      links.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        links.classList.remove("active");
       });
-      document.querySelectorAll(".links a").forEach((a) => {
-        a.addEventListener("click", () => {
-          links.classList.remove("active");
-        });
-      });
-    }
-    /* DATA POPUP LAYANAN */
+    });
+
+
+    /* =========================
+       DATA LAYANAN
+    ========================= */
+
     const services = {
+
       supplier: {
         number: "01",
         title: "General Supplier",
-        content: `
-          <p>
-            PT. Firaman Bisnis Mandiri menyediakan layanan
-            pengadaan barang dan jasa untuk berbagai kebutuhan
-            bisnis, perusahaan maupun proyek.
-          </p>
-          <p>
-            Kami membantu kebutuhan pengadaan sesuai dengan
-            spesifikasi dan kebutuhan pelanggan.
-          </p>
-        `
+        intro: "Pengadaan berbagai kebutuhan barang dan jasa.",
+        items: [
+          "Pengadaan barang kebutuhan perusahaan",
+          "Pengadaan perlengkapan kantor",
+          "Pengadaan kebutuhan proyek",
+          "Pengadaan barang dan jasa lainnya",
+          "Koordinasi pengiriman dan distribusi"
+        ]
       },
+
       notarial: {
         number: "02",
         title: "Notarial Deed",
-        content: `
-          <p>
-            Layanan yang membantu kebutuhan administrasi
-            dan dokumen terkait akta notaris.
-          </p>
-          <p>
-            Konsultasikan kebutuhan dokumen dan proses
-            administrasi yang diperlukan kepada kami.
-          </p>
-        `
+        intro: "Layanan pembuatan dan pengurusan akta notaris.",
+        items: [
+          "Pembuatan akta notaris",
+          "Pengurusan dokumen terkait akta",
+          "Pendirian dan perubahan badan usaha",
+          "Pengurusan dokumen perusahaan",
+          "Koordinasi proses administrasi notarial"
+        ]
       },
+
       document: {
         number: "03",
         title: "Document Handling",
-        content: `
-          <p>
-            Layanan pengurusan dan penerbitan berbagai
-            kebutuhan dokumen.
-          </p>
-          <ul>
-            <li><strong>PBG</strong> — Persetujuan Bangunan Gedung</li>
-            <li><strong>PKKPR</strong> — Persetujuan Kesesuaian Kegiatan Pemanfaatan Ruang</li>
-          </ul>
-          <p>
-            Untuk kebutuhan dokumen lainnya, silakan
-            hubungi kami untuk mendapatkan informasi lebih lanjut.
-          </p>
-        `
+        intro: "Layanan pengurusan dan penerbitan berbagai dokumen.",
+        items: [
+          "PBG — Persetujuan Bangunan Gedung",
+          "PKKPR — Persetujuan Kesesuaian Kegiatan Pemanfaatan Ruang",
+          "Pengurusan dokumen administrasi",
+          "Pengurusan dokumen perizinan",
+          "Koordinasi proses dan kelengkapan dokumen"
+        ]
       },
+
       construction: {
         number: "04",
         title: "Construction",
-        content: `
-          <p>
-            Layanan yang berkaitan dengan kebutuhan konstruksi
-            dan pembangunan.
-          </p>
-          <p>
-            Konsultasikan kebutuhan pekerjaan konstruksi
-            dan pembangunan yang Anda perlukan.
-          </p>
-        `
+        intro: "Layanan konstruksi untuk berbagai kebutuhan pekerjaan dan proyek.",
+        items: [
+          "Pekerjaan konstruksi",
+          "Pekerjaan pembangunan dan renovasi",
+          "Pengadaan kebutuhan material proyek",
+          "Koordinasi tenaga dan pekerjaan lapangan",
+          "Koordinasi pelaksanaan proyek"
+        ]
       },
+
       architect: {
         number: "05",
         title: "Architect Design",
-        content: `
-          <p>
-            Layanan perencanaan dan desain arsitektur untuk
-            berbagai kebutuhan bangunan.
-          </p>
-          <p>
-            Konsultasikan kebutuhan desain bangunan Anda
-            bersama PT. Firaman Bisnis Mandiri.
-          </p>
-        `
+        intro: "Perencanaan dan desain arsitektur untuk berbagai kebutuhan.",
+        items: [
+          "Desain arsitektur bangunan",
+          "Perencanaan konsep bangunan",
+          "Pembuatan gambar desain",
+          "Perencanaan kebutuhan ruang",
+          "Konsultasi dan koordinasi desain"
+        ]
       },
+
       realestate: {
         number: "06",
         title: "Real Estate",
-        content: `
-          <p>
-            Layanan dan kebutuhan yang berkaitan dengan
-            properti dan real estate.
-          </p>
-          <p>
-            Hubungi kami untuk informasi lebih lanjut mengenai
-            kebutuhan properti dan real estate.
-          </p>
-        `
+        intro: "Layanan yang berkaitan dengan kebutuhan properti dan real estate.",
+        items: [
+          "Informasi dan kebutuhan properti",
+          "Konsultasi terkait properti",
+          "Koordinasi kebutuhan transaksi properti",
+          "Pendampingan administrasi properti",
+          "Koordinasi kebutuhan real estate"
+        ]
       }
+
     };
-    /* POPUP */
-    const modal = document.getElementById("serviceModal");
+
+
+    /* =========================
+       POPUP
+    ========================= */
+
+    const serviceModal = document.getElementById("serviceModal");
     const modalClose = document.getElementById("modalClose");
     const modalNumber = document.getElementById("modalNumber");
     const modalTitle = document.getElementById("modalTitle");
-    const modalContent = document.getElementById("modalContent");
-    document.querySelectorAll(".service-card").forEach((card) => {
-      card.addEventListener("click", () => {
-        const serviceKey = card.getAttribute("data-service");
-        const service = services[serviceKey];
-        if (!service) return;
-        modalNumber.textContent = service.number;
-        modalTitle.textContent = service.title;
-        modalContent.innerHTML =
-          service.content +
-          `
-            <a
-              class="modal-wa"
-              href="https://wa.me/628117000250"
-              target="_blank">
-              Tanya Melalui WhatsApp
-            </a>
-          `;
-        modal.classList.add("active");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
+    const modalIntro = document.getElementById("modalIntro");
+    const modalList = document.getElementById("modalList");
+
+
+    function openService(serviceKey) {
+
+      const service = services[serviceKey];
+
+      if (!service) return;
+
+      modalNumber.textContent = service.number;
+      modalTitle.textContent = service.title;
+      modalIntro.textContent = service.intro;
+
+      modalList.innerHTML = "";
+
+      service.items.forEach(function (item) {
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        modalList.appendChild(li);
+
       });
-    });
-    /* TUTUP POPUP */
-    function closeServiceModal() {
-      modal.classList.remove("active");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
+
+      serviceModal.classList.add("active");
+      serviceModal.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
     }
-    modalClose.addEventListener("click", closeServiceModal);
-    /* KLIK DI LUAR BOX */
-    modal.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        closeServiceModal();
-      }
+
+
+    function closeService() {
+
+      serviceModal.classList.remove("active");
+      serviceModal.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    document.querySelectorAll(".service-card").forEach(function (card) {
+
+      card.addEventListener("click", function () {
+
+        openService(card.dataset.service);
+
+      });
+
+
+      card.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter" || event.key === " ") {
+
+          event.preventDefault();
+
+          openService(card.dataset.service);
+
+        }
+
+      });
+
     });
-    /* TOMBOL ESC */
-    document.addEventListener("keydown", (event) => {
+
+
+    modalClose.addEventListener("click", closeService);
+
+
+    serviceModal.addEventListener("click", function (event) {
+
+      if (event.target === serviceModal) {
+
+        closeService();
+
+      }
+
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+
       if (event.key === "Escape") {
-        closeServiceModal();
+
+        closeService();
+
       }
+
     });
+
   </script>
+
 </body>
 </html>
