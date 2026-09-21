@@ -100,150 +100,216 @@ button{
   cursor:pointer;
 }
 /* =========================================================
-   HERO
+   HERO - NEW CORPORATE DESIGN
 ========================================================= */
 .hero{
   min-height:100vh;
-  padding:130px 0 80px;
+  padding:120px 0 70px;
   display:flex;
   align-items:center;
-  background:
-    linear-gradient(
-      135deg,
-      #fff 0%,
-      #f7f9fc 100%
-    );
+  position:relative;
+  overflow:hidden;
+  background:#f5f8fc;
 }
+
 .hero-grid{
   display:grid;
-  grid-template-columns:1.08fr .92fr;
-  gap:60px;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
   align-items:center;
 }
+
 .hero-content{
+  position:relative;
+  z-index:3;
   min-width:0;
 }
-.badge,
-.section-label{
+
+.badge{
+  display:inline-block;
+  margin-bottom:18px;
   font-size:12px;
   letter-spacing:2px;
   text-transform:uppercase;
   color:#b48424;
-  font-weight:700;
+  font-weight:800;
 }
-.badge{
-  display:inline-block;
-  margin-bottom:15px;
-}
+
 h1{
-  font-size:clamp(42px,6vw,70px);
-  line-height:1.05;
-  letter-spacing:-2px;
+  font-size:clamp(42px,5.5vw,68px);
+  line-height:1.04;
+  letter-spacing:-2.5px;
   margin-bottom:22px;
   color:#0a356d;
 }
+
 h1 span{
   color:#b48424;
 }
+
 .hero-content>p{
-  max-width:650px;
+  max-width:590px;
   color:#5d6674;
   font-size:17px;
+  line-height:1.7;
   margin-bottom:30px;
 }
+
 .hero-buttons{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
 }
+
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:13px 22px;
-  border-radius:7px;
+  padding:14px 23px;
+  border-radius:8px;
   font-weight:700;
   font-size:14px;
   transition:.2s ease;
 }
+
 .primary{
   background:#0a356d;
   color:#fff;
 }
+
 .primary:hover{
   background:#08294f;
   transform:translateY(-2px);
 }
+
 .secondary{
-  border:1px solid #ddd;
+  border:1px solid #d9dee6;
   background:#fff;
   color:#10213f;
 }
+
 .secondary:hover{
   border-color:#b48424;
   color:#b48424;
 }
-/* =========================================================
-   PREMIUM LOGO AREA
-========================================================= */
+
+/* VISUAL GEDUNG */
 .hero-logo{
   min-width:0;
-}
-.logo-box{
   position:relative;
-  width:100%;
-  min-height:420px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:55px;
+  height:560px;
+  border-radius:28px;
+  overflow:hidden;
   background:
     linear-gradient(
-      145deg,
-      #ffffff 0%,
-      #fbfcfe 55%,
-      #f5f7fa 100%
+      135deg,
+      rgba(10,53,109,.05),
+      rgba(180,132,36,.08)
     );
-  border:1px solid #e8ebef;
-  border-radius:24px;
-  box-shadow:
-    0 25px 70px rgba(10,53,109,.12);
-  overflow:hidden;
+  box-shadow:0 25px 70px rgba(10,53,109,.15);
 }
-.logo-box::before{
+
+.hero-logo::before{
   content:"";
   position:absolute;
-  top:-120px;
-  right:-120px;
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  border:1px solid rgba(180,132,36,.15);
-}
-.logo-box::after{
-  content:"";
-  position:absolute;
-  bottom:-140px;
-  left:-140px;
-  width:300px;
-  height:300px;
-  border-radius:50%;
-  border:1px solid rgba(10,53,109,.08);
-}
-.logo-box img{
-  position:relative;
+  inset:0;
   z-index:2;
-  display:block;
-  width:100%;
-  max-width:390px;
-  height:auto;
-  object-fit:contain;
-  filter:
-    drop-shadow(0 18px 25px rgba(10,53,109,.10));
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245,248,252,.95) 0%,
+      rgba(245,248,252,.45) 25%,
+      rgba(245,248,252,0) 55%
+    );
+  pointer-events:none;
 }
-/* =========================================================
-   ALAMAT KADIN
-========================================================= */
+
+.hero-logo::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:35%;
+  z-index:2;
+  background:
+    linear-gradient(
+      to top,
+      rgba(10,53,109,.28),
+      transparent
+    );
+  pointer-events:none;
+}
+
+.hero-logo .logo-box{
+  position:absolute;
+  inset:0;
+  min-height:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  background-image:url("hero-building.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-logo .logo-box::before,
+.hero-logo .logo-box::after{
+  display:none;
+}
+
+.hero-logo .logo-box img{
+  display:none;
+}
+
+/* alamat tetap */
+.address-card{
+  margin-top:28px;
+  border:1px solid #e2c77e;
+  background:#fff;
+  border-radius:12px;
+  padding:18px 20px;
+  max-width:650px;
+}
+
+.address-label{
+  display:block;
+  margin-bottom:5px;
+  color:#b48424;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.address-card strong{
+  display:block;
+  color:#0a356d;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.address-card span{
+  display:block;
+  margin-top:2px;
+  color:#5d6674;
+  font-size:13px;
+}
+
+.address-card a{
+  display:inline-block;
+  margin-top:9px;
+  color:#0a356d;
+  font-size:12px;
+  font-weight:700;
+}
+
+.address-card a:hover{
+  color:#b48424;
+}
+
+
 .address-card{
   margin-top:28px;
   border:1px solid #e2c77e;
@@ -822,40 +888,63 @@ footer{
 <!-- =========================================================
      HERO
 ========================================================= -->
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
+
       <div class="hero-content">
+
         <span class="badge">
           PT. FIRAMAN BISNIS MANDIRI
         </span>
+
         <h1>
           Partner Bisnis Untuk
           <span>Berbagai Kebutuhan.</span>
         </h1>
+
         <p>
           Menyediakan berbagai kebutuhan barang, pengurusan
           dokumen, notarial deed, konstruksi, desain arsitektur
           dan kebutuhan real estate.
         </p>
+
         <div class="hero-buttons">
-          <a href="#layanan" class="btn primary">
+
+          <a
+            href="#kontak"
+            class="btn primary"
+          >
+            Hubungi Kami →
+          </a>
+
+          <a
+            href="#layanan"
+            class="btn secondary"
+          >
             Lihat Layanan
           </a>
-          <a href="#kontak" class="btn secondary">
-            Hubungi Kami
-          </a>
+
         </div>
+
         <div class="address-card">
+
           <span class="address-label">
             Alamat (KADIN)
           </span>
+
           <strong>
             KADIN Kota Batam berkantor pusat di Graha KADIN
           </strong>
+
           <span>
             Jl. Engku Putri, Blok A, Batam Centre
           </span>
+
           <a
             href="https://maps.app.goo.gl/dtVMgeYhW9fRAbyY6?g_st=ic"
             target="_blank"
@@ -863,23 +952,19 @@ footer{
           >
             Klik untuk melihat lokasi di Google Maps →
           </a>
+
         </div>
+
       </div>
-      <!-- LOGO -->
+
       <div class="hero-logo">
-        <div class="logo-box">
-          <img
-            src="42F95042-A1A8-484D-8531-E555701973D5.png"
-            alt="PT. Firaman Bisnis Mandiri"
-          >
-        </div>
+        <div class="logo-box"></div>
       </div>
+
     </div>
   </div>
 </section>
-<!-- =========================================================
-     TENTANG
-========================================================= -->
+
 <section class="about" id="tentang">
   <div class="container">
     <div class="section-label">
