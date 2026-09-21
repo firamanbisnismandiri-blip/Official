@@ -1129,3 +1129,60 @@ color: var(–white);
 }
 
 }
+@media(max-width:900px){
+
+  .hero{
+    padding:115px 0 60px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .hero-logo{
+    order:-1;
+    height:380px;
+    border-radius:22px;
+  }
+
+  .hero-logo::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245,248,252,.15),
+        rgba(245,248,252,0)
+      );
+  }
+
+  h1{
+    font-size:clamp(40px,11vw,58px);
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding-top:105px;
+  }
+
+  .hero-logo{
+    height:300px;
+    border-radius:18px;
+  }
+
+  .hero-content>p{
+    font-size:15px;
+  }
+
+  .hero-buttons{
+    width:100%;
+  }
+
+  .hero-buttons .btn{
+    flex:1;
+    min-width:140px;
+  }
+
+}
